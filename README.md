@@ -10,7 +10,7 @@ doc 3 = `Shipment of gold arrived in a truck`
 
 doc 4 = `Delivery and Shipment of gold arrived from a truck`
 
-You made a QUERY which containt
+You made a QUERY which contain
  `gold silver truck`
 
 ##And The result is :
