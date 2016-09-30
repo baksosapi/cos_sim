@@ -1,0 +1,703 @@
+/*! HTML5 Boilerplate v5.0.0 | MIT License | http://h5bp.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers:
+ * http://juicystudio.com/article/screen-readers-display-none.php
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+(-o-min-device-pixel-ratio: 5/4),
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        /* Black prints faster:http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    color: #222;
+    font: 300 14px Roboto,Arial,Helvetica,sans-serif;
+    line-height: 1.4;
+    /*overflow: hidden;*/
+    position: relative;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+h3 {
+    font: 300 22px "Open Sans";
+}
+
+#navbar {
+    -webkit-box-shadow: 0 0 3px rgba(34, 34, 34, .6);
+    box-shadow: 0 0 3px rgba(34, 34, 34, .6);
+    background-color: #333;
+    color: #fff;
+    height: 60px;
+    position: relative;
+    width: 100%;
+    z-index: 110;
+}
+
+.ryjAXe-l4eHX {
+    display: inline-block;
+    float: left;
+    margin-right: 80px;
+}
+
+.ryjAXe-l4eHX_ {
+    display: inline-block;
+    float: right;
+    margin-left: 80px;
+}
+
+.ryjAXe-l4eHX-jcJzye {
+    height: 40px;
+    width: 40px;
+    /*background: no-repeat url(//cdn0.iconfinder.com/data/icons/social-flat-rounded-rects/512/google-128.png);*/
+    background-size: cover;
+    float: left;
+    margin: 5px 6px 0 0;
+}
+
+.ryjAXe-l4eHX-fmcmS {
+    color: #ccc;
+    font: 300 22px "Open Sans";
+    line-height: 46px;
+    white-space: nowrap;
+}
+.ryjAXe-l4eHX-fmcmS a{
+    color: #ccc;
+    font: 300 22px "Open Sans";
+    line-height: 46px;
+    white-space: nowrap;
+    text-decoration: none;
+
+}
+.ryjAXe-l4eHX-fmcmS a:hover{
+    color: #f4f4f4;
+    font: 300 22px "Open Sans";
+    line-height: 46px;
+    white-space: nowrap;
+    text-decoration: none;
+
+}
+
+.ryjAXe-MgCxZb {
+    bottom: 5px;
+    left: 30px;
+    position: absolute;
+    right: 30px;
+    top: 5px;
+}
+
+a {
+    background-color: transparent;
+}
+
+.cf:before, .cf:after{
+    content:"";
+    display:table;
+}
+ 
+.cf:after{
+    clear:both;
+}
+ 
+.cf{
+    zoom:1;
+}    
+
+/* Form wrapper styling */
+.form-wrapper {
+    width: 650px;
+    padding: 6px;
+    margin: auto auto 50px auto;
+    /*background: #444;*/
+    /*background: rgba(0,0,0,.2);*/
+    border-radius: 10px;
+    /*box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2);*/
+}
+ 
+/* Form text input */
+ 
+.form-wrapper input {
+    width: 530px;
+    height: 40px;
+    padding: 10px 5px;
+    float: left;    
+    font: bold 15px "Open Sans";
+    border: 0;
+    background: #eee;
+    border-radius: 3px 0 0 3px;      
+}
+ 
+.form-wrapper input:focus {
+    outline: 0;
+    background: #fff;
+    box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
+}
+ 
+.form-wrapper input::-webkit-input-placeholder {
+   color: #999;
+   font-weight: normal;
+   font-style: italic;
+}
+ 
+.form-wrapper input:-moz-placeholder {
+    color: #999;
+    font-weight: normal;
+    font-style: italic;
+}
+ 
+.form-wrapper input:-ms-input-placeholder {
+    color: #999;
+    font-weight: normal;
+    font-style: italic;
+}    
+ 
+/* Form submit button */
+.form-wrapper button {
+    overflow: visible;
+    position: relative;
+    float: right;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    height: 40px;
+    width: 110px;
+    font: bold 15px/40px "Open Sans";
+    color: #fff;
+    text-transform: uppercase;
+    background: #D0422A;
+    border-radius: 0 3px 3px 0;      
+    text-shadow: 0 -1px 0 rgba(0, 0 ,0, .3);
+}   
+   
+.form-wrapper button:hover{     
+    background: #e54040;
+}   
+   
+.form-wrapper button:active,
+.form-wrapper button:focus{   
+    background: #c42f2f;
+    outline: 0;   
+}
+ 
+.form-wrapper button:before { /* left arrow */
+    content: '';
+    position: absolute;
+    border-width: 8px 8px 8px 0;
+    border-style: solid solid solid none;
+    border-color: transparent #d83c3c transparent;
+    top: 12px;
+    left: -6px;
+}
+ 
+.form-wrapper button:hover:before{
+    border-right-color: #e54040;
+}
+ 
+.form-wrapper button:focus:before,
+.form-wrapper button:active:before{
+        border-right-color: #c42f2f;
+}      
+ 
+.form-wrapper button::-moz-focus-inner { /* remove extra button spacing for Mozilla Firefox */
+    border: 0;
+    padding: 0;
+}
+
+/*me*/
+
+input[type=checkbox]{display:none}
+
+.switch
+{
+    width: 62px;
+    height: 32px;
+    background: #E5E5E5;
+    z-index: 0;
+    margin: 0;
+    padding: 0;
+    -webkit-appearance: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    border-radius:16px; //IE 11
+-moz-border-radius:16px; //Mozilla
+-webkit-border-radius:16px; //Chrome and Safari
+}
+
+.switch:before
+{
+    content: ' ';
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    width: 60px;
+    height: 30px;
+    background: #FFFFFF;
+    z-index: 1;
+    border-radius:16px; //IE 11
+-moz-border-radius:16px; //Mozilla
+-webkit-border-radius:16px; //Chrome and Safari
+}
+
+.switch:after
+{
+    content: ' ';
+    height: 29px;
+    width: 29px;
+    border-radius: 28px;
+    z-index: 2;
+    background: #FFFFFF;
+    position: absolute;
+    -webkit-transition-duration: 300ms;
+    transition-duration: 300ms;
+    top: 1px;
+    left: 1px;
+    -webkit-box-shadow: 0 2px 5px #999999;
+    box-shadow: 0 2px 5px #999999;
+}
+
+.switchOn , .switchOn:before
+{
+    background: #4cd964 !important;
+}
+.switchOn:after
+{
+    left: 32px !important;
+}
+
+#status{
+    margin: 5px;
+    height: 100px;
+    width: 200px;
+    /*box-shadow: 0 0 3px rgba(34, 34, 34, .6);*/
+}
+
+
+#book-form {
+    background-color:#F2F7F9;
+    width:465px;
+    padding:20px;
+    margin: 20px auto;
+    border: 1px solid #8FB5C1;
+    -moz-border-radius:15px;
+    -webkit-border-radius:15px;
+    border-radius:15px;
+    position:relative;
+}
+
+#book-form h1 {
+    font-size:42px;
+}
+
+#book-form h2 {
+    margin-bottom:15px;
+    font-style:italic;
+    font-weight:normal;
+}
+
+#book-form input,
+#book-form select,
+#book-form textarea,
+#book-form label {
+    font-size:15px;
+    margin-bottom:2px;
+}
+
+#book-form input,
+#book-form select,
+#book-form textarea {
+    width:450px;
+    border: 1px solid #CEE1E8;
+    margin-bottom:20px;
+    padding:4px;
+}
+
+#book-form input:focus,
+#book-form select:focus,
+#book-form textarea:focus {
+    border: 1px solid #AFCDD8;
+    background-color: #EBF2F4;
+}
+
+#book-form textarea {
+    height:150px;
+    resize: none;
+}
+
+#book-form label {
+    display:block;
+}
+
+#book-form .required {
+    font-weight:bold;
+    color:#F00;
+}
+
+#book-form #submit-button {
+    width: 100px;
+    background-color:#333;
+    color:#FFF;
+    border:none;
+    display:block;
+    float:right;
+    margin-bottom:0px;
+    margin-right:6px;
+    background-color:#8FB5C1;
+    -moz-border-radius:8px;
+}
+
+#book-form #submit-button:hover {
+    background-color: #A6CFDD;
+}
+
+#book-form #submit-button:active {
+    position:relative;
+    top:1px;
+}
+
+#book-form #loading {
+    width:32px;
+    height:32px;
+    background-image:url(../img/loading.gif);
+    display:block;
+    position:absolute;
+    right:130px;
+    bottom:16px;
+    display:none;
+}
+
+#errors {
+    border:solid 1px #E58E8E;
+    padding:10px;
+    margin:25px 0px;
+    display:block;
+    width:437px;
+    -webkit-border-radius:8px;
+    -moz-border-radius:8px;
+    border-radius:8px;
+    background:#FFE6E6 url(../img/cancel_48.png) no-repeat 405px center;
+    display:none;
+}
+
+#errors li {
+    padding:2px;
+    list-style:none;
+}
+
+#errors li:before {
+    content: ' - ';
+}
+
+#errors #info {
+    font-weight:bold;
+}
+
+#errors #info:before {
+    content: '';
+}
+
+#success {
+    border:solid 1px #83D186;
+    padding:25px 10px;
+    margin:25px 0px;
+    display:block;
+    width:437px;
+    -webkit-border-radius:8px;
+    -moz-border-radius:8px;
+    border-radius:8px;
+    background:#D3EDD3 url(../img/accepted_48.png) no-repeat 405px center;
+    font-weight:bold;
+    display:none;
+}
+
+#errors.visible, #success.visible {
+    display:block;
+}
+
+#req-field-desc {
+    font-style:italic;
+}
+
+/* Remove box shadow firefox, chrome and opera put around required fields. It looks rubbish. */
+input:required, textarea:required {
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none;
+    -o-box-shadow:none;
+    box-shadow:none;
+}
+
+/* Normalize placeholder styles */
+
+/* chrome, safari */
+::-webkit-input-placeholder {
+    color:#CCC;
+    font-style:italic;
+}
+
+/* mozilla */
+input:-moz-placeholder, textarea:-moz-placeholder {
+    color:#CCC;
+    font-style:italic;
+}
+
+/* ie (faux placeholder) */
+input.placeholder-text, textarea.placeholder-text  {
+    color:#CCC;
+    font-style:italic;
+}

@@ -8,7 +8,7 @@
  */
 namespace Controller;
 
-class Books extends BaseController
+class Books_Type extends BaseController
 {
     public function __construct()
     {
@@ -36,7 +36,7 @@ class Books extends BaseController
             $this->view->id = $this->model->addNewBooks($_POST);
 
         } else {
-            $this->view->render('books/add');
+            $this->view->render('books_type/add');
         }
     }
 }

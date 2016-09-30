@@ -20,9 +20,8 @@ class BaseView
     }
 
     public function render($name){
-        print_r($name);
-        require_once "View/layout/header.php";
-        require_once "views/".name.".php";
-        require_once "View/layout/footer.php";
+        require_once "src/View/layout/header.php";
+        require_once "src/View/".$name.".php";
+        require_once "src/View/layout/footer.php";
     }
 }

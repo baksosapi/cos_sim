@@ -22,14 +22,14 @@ abstract class BaseController
     public function loadModel($name){
 
         $modelName = ucfirst($name);
-        $path = 'src/Model/'.$modelName.'.php';
+        $path = 'src/Model/'.$modelName.'Model.php';
 
         if (file_exists($path)){
 
 
-            require_once($path);
+//            require_once($path);
 
-            $modelName = "\\Model\\".$modelName;
+            $modelName = "\\Model\\".$modelName."Model";
 
             $this->model = new $modelName();
 
