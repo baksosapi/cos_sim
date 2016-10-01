@@ -60,12 +60,15 @@ class Bootstrap
 //            print_r($controller);
             if (isset($controller)) {
 //                $controller -> index();
+//                print_r($controller);
                 if (isset($url[1])) {
-                    if($url[1] == 'add'){
-                        (new $controller()) -> add();
-                    } else {
-                        (new $controller()) -> index();
-                    }
+//                    if($url[1] == 'add'){
+//                        (new $controller()) -> add();
+//                    } else {
+//                        (new $controller()) -> index();
+//                    }
+                    (new $controller) -> $url[1]();
+
                 } else {
 
                     (new $controller()) -> index();

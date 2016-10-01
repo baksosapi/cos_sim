@@ -8,6 +8,8 @@
  */
 namespace Controller;
 
+use Model\Books_typeModel;
+
 class Books extends BaseController
 {
     public function __construct()
@@ -35,8 +37,11 @@ class Books extends BaseController
 
             $this->view->id = $this->model->addNewBooks($_POST);
 
-        } else {
-            $this->view->render('books/add');
         }
+            $type_data = (new Books_typeModel())->listBooksType();
+
+            $this->view->type_data = $type_data;
+
+            $this->view->render('books/add');
     }
 }

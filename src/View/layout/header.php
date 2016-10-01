@@ -43,9 +43,9 @@ $page_title = '';
             <span class="ryjAXe-l4eHX-jcJzye"></span><span class="ryjAXe-l4eHX-fmcmS"><?php echo $page_title;?></span>
         </div>
         <div class="ryjAXe-l4eHX_">
-            <span class="ryjAXe-l4eHX-fmcmS"><a href="./">Home</a> </span>
-            <span class="ryjAXe-l4eHX-fmcmS"><a href="./?url=books/add">New</a> </span>
-            <span class="ryjAXe-l4eHX-fmcmS"><a href="./?url=books_type/add">New Type</a> </span>
+            <span class="menu-link"><a href="./">Home</a> </span>
+            <span class="menu-link"><a href="./?url=books/add">Book</a> </span>
+            <span class="menu-link"><a href="./?url=books_type/add">Type</a> </span>
         </div>
     </div>
 </div>

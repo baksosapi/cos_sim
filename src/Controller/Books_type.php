@@ -13,15 +13,25 @@ class Books_Type extends BaseController
     public function __construct()
     {
         parent::__construct();
-        $this->loadModel("books");
+        $this->loadModel("books_type");
     }
 
     public function index(){
-        $this->view->render('books/index');
+        $this->view->render('books_type/index');
     }
     public function get(){
-        $this->view->render('books/get');
+        $this->view->render('books_type/get');
     }
+
+    public function lists(){
+
+        $type_data = $this->model->listBooksType();
+
+        $this->view->type_data = $type_data;
+
+        $this->view->render('books_type/lists');
+    }
+
     public function add(){
 
         if(isset($_POST['submit'])){
@@ -33,9 +43,11 @@ class Books_Type extends BaseController
 //            header("index.html");
             unset($_POST['submit']);
 
-            $this->view->id = $this->model->addNewBooks($_POST);
+
+            $this->view->id = $this->model->addNewBooksType($_POST);
 
         } else {
+
             $this->view->render('books_type/add');
         }
     }

@@ -342,6 +342,32 @@ h3 {
     top: 5px;
 }
 
+
+.menu-link {
+    color: #ccc;
+    font: 300 14px "Open Sans";
+    line-height: 46px;
+    white-space: nowrap;
+}
+
+.menu-link a{
+    color: #ccc;
+    font: 300 14px "Open Sans";
+    line-height: 46px;
+    white-space: nowrap;
+    text-decoration: none;
+
+}
+.menu-link a:hover{
+    color: #FFF;
+    font: 300 14px "Open Sans";
+    line-height: 46px;
+    white-space: nowrap;
+    text-decoration: none;
+
+}
+
+
 a {
     background-color: transparent;
 }
@@ -373,7 +399,7 @@ a {
 /* Form text input */
  
 .form-wrapper input {
-    width: 530px;
+    width: 540px;
     height: 40px;
     padding: 10px 5px;
     float: left;    

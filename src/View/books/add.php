@@ -13,10 +13,10 @@ $page_title = "Tambah Koleksi Buku ..."
     <h2>Tambah Data Buku</h2>
 <!--    <h1>Tambah Data Buku</h1>-->
 <!--    <h2>Lengkapi formulir isian berikut dengan benar </h2>-->
-    <ul id="errors" class="">
+    <ul id="errors" class="<?= ($sr && !$cf['ok']) ? 'visible':'';?>">
         <li id="info">Terdapat kesalahan penambahan data:</li>
     </ul>
-    <p id="success">Data Buku berhasil ditambahkan!</p>
+    <p id="success" class="<?=(isset($this->id))?'visible':'';?>">Data Buku berhasil ditambahkan!</p>
     <form method="post" action="?url=books/add">
         <label for="title">Judul: <span class="required">*</span></label>
         <input type="text" id="title" name="title" value="" placeholder="Pemrograman Java" required="required" autofocus="autofocus" />
@@ -31,10 +31,11 @@ $page_title = "Tambah Koleksi Buku ..."
         <input type="isbn" id="isbn" name="isbn" value="" />
 
         <label for="type">Jenis Buku: </label>
-        <select id="enquiry" name="type">
-            <option value="1">Umum</option>
-            <option value="2">Non-Fiksi</option>
-            <option value="3">Support</option>
+        <select id="type" name="type">
+        <?php foreach($this->type_data as $type): ?>
+                <option value="<?= $type['code']?>"><?= $type['type_name'] ?></option>
+        <?php endforeach; ?>
+
         </select>
 
         <label for="blurb">Ringkasan : <span class="required">*</span></label>

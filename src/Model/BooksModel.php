@@ -25,18 +25,28 @@ class BooksModel extends BaseModel
         parent::__construct();
     }
 
-    public function addNewBooks($books){
-        ksort($books);
-        print_r($books);
-        $columns = implode(',', array_keys($books));
-        print_r($columns);
-        $values = ":" . implode(', :', array_keys($books));
-        print_r($values);
+    public function addNewBooks($book){
+        ksort($book);
+//        print_r($books);
+        $columns = implode(',', array_keys($book));
+//        print_r($columns);
+        $values = ":" . implode(', :', array_keys($book));
+//        print_r($values);
 
-        $st = $this->db->prepare("INSERT INTO books($columns) VALUES($values);");
+        $st = $this->db->prepare("INSERT INTO book($columns) VALUES($values);");
 
-        foreach ($books as $k => $v){
-            $st->bindValue(":$k", $values);
+//        print_r($book['blurb']);
+
+//        $words[] = preg_split('/((^\p{P}+)|(\p{P}*\s+\p{P}*)|(\p{P}+$))/', $book['blurb'], -1, PREG_SPLIT_NO_EMPTY);
+//        echo '<pre>';print_r($words);
+
+//        $col = implode(',', array_keys($words));
+//        $val = implode(', :', array_keys($words));
+//        $st_word = $this->db->prepare("INSERT INTO word($col) VALUES($val);");
+
+
+        foreach ($book as $k => $v){
+            $st->bindValue(":$k", $v);
         }
 
         $st->execute();
@@ -45,7 +55,7 @@ class BooksModel extends BaseModel
     }
 
     public function getBooks(){
-        return $this->db->query("SELECT * FROM books")->fetchAll(\PDO::FETCH_ASSOC);
+        return $this->db->query("SELECT * FROM book")->fetchAll(\PDO::FETCH_ASSOC);
     }
 
 }
