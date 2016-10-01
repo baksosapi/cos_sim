@@ -41,8 +41,14 @@ class Search extends BaseController
         echo '<pre>';print_r($d);
         echo '<pre>';print_r($qr);
 
-        $cs = new CosineSimilarity($data_num,$qr);
+//        $cs = new CosineSimilarity($data_num,$qr);
+        $cs = new CosineSimilarity($d,$qr);
 
+        $tableShow = new ShowDisplay($cs);
+        $tableShow->TableShow();
+
+// SHOW RESULT
+        $tableShow->TableShowResult();
     }
 
 }
