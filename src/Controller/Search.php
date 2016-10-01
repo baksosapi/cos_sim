@@ -10,6 +10,7 @@ namespace Controller;
 
 
 use CosineSimilarity;
+use ShowDisplay;
 
 class Search extends BaseController
 {
@@ -34,15 +35,15 @@ class Search extends BaseController
         $qr[] = $search_data[1];
 
 //        echo '<pre>';print_r($data_num);
-        $d[0] = "Shipment of gold damaged in a fire";
-        $d[1] = "Delivery of silver arrived in a silver truck";
-        $d[2] = "Shipment of gold arrived in a truck";
-        $d[3] = "Delivery and Shipment of gold arrived from a truck";
-        echo '<pre>';print_r($d);
-        echo '<pre>';print_r($qr);
+//        $d[0] = "Shipment of gold,damaged in a fire";
+//        $d[1] = "Delivery of silver arrived in a silver truck";
+//        $d[2] = "Shipment of gold arrived in a truck";
+//        $d[3] = "Delivery and Shipment of gold arrived from a truck";
+//        echo '<pre>';print_r($d);
+//        echo '<pre>';print_r($qr);
+//        $cs = new CosineSimilarity($d,$qr);
 
-//        $cs = new CosineSimilarity($data_num,$qr);
-        $cs = new CosineSimilarity($d,$qr);
+        $cs = new CosineSimilarity($data_num,$qr);
 
         $tableShow = new ShowDisplay($cs);
         $tableShow->TableShow();

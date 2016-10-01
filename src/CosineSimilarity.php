@@ -32,7 +32,7 @@ class CosineSimilarity {
 
         $this->num_d = sizeof($d);
 
-        print_r(sizeof($data));
+//        print_r(sizeof($data));
 
         if (isset($data)){
 
@@ -48,7 +48,7 @@ class CosineSimilarity {
 
 
         foreach (array_filter($this->str) as $arr){
-            $this->words[] = preg_split('/((^\p{P}+)|(\p{P}*\s+\p{P}*)|(\p{P}+$))/', $arr, -1, PREG_SPLIT_NO_EMPTY);
+            $this->words[] = preg_split('/((^\p{P}+)|(\p{P}*\s+\p{P}*)|(\p{P}+$)|(\p{P}))/', $arr, -1, PREG_SPLIT_NO_EMPTY);
         }
 
         $all_word = call_user_func('array_merge',$this->words);
@@ -115,6 +115,7 @@ class CosineSimilarity {
 
         foreach ($key_word as $au_idx){
             $i = 0;
+            $au_idx = strval($au_idx);
             foreach ($arr_word as $w_idx){
                 if($i===$this->num_d){
                     $mtx_count_qr[$au_idx][] = count(array_keys($w_idx,$au_idx));
@@ -171,10 +172,14 @@ class CosineSimilarity {
      * @return null
      */
     public function countDDFi($df){
-        echo '<pre>';print_r($df);
+//        echo '<pre>';print_r($df);
         foreach($df as $k => $v) {
 
-            $result[$k] = $this->num_d/$v;
+            if ($v === 0){
+                $result[$k] = 0;
+            } else {
+                $result[$k] = $this->num_d/$v;
+            }
         }
 
         if(!empty($result)) {
@@ -209,6 +214,12 @@ class CosineSimilarity {
 
         foreach ($tf as $k => $v){
             for($i=0;$i<sizeof($v);$i++){
+//                TODO : undefined offset 0 3 4 5
+//                echo '<pre>';print_r(gettype($k));
+//                echo '<pre>';print_r($v);
+//                if(is_integer($k)){
+//                    $k = strval($k);
+//                }
                 $res[$k][] = $v[$i] * $idf[$k] ;
             }
         }
