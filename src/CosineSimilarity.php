@@ -26,7 +26,8 @@ class CosineSimilarity {
     public $cos_sim;
     public $show_result;
 
-    public function __construct($d,$q){
+//    public function __construct($d,$q){
+    public function __construct($q,$d){
 
         $data = func_get_args();
 
@@ -46,10 +47,11 @@ class CosineSimilarity {
 
 //        echo '<pre>';print_r($this->str);
 
-
         foreach (array_filter($this->str) as $arr){
             $this->words[] = preg_split('/((^\p{P}+)|(\p{P}*\s+\p{P}*)|(\p{P}+$)|(\p{P}))/', $arr, -1, PREG_SPLIT_NO_EMPTY);
         }
+
+
 
         $all_word = call_user_func('array_merge',$this->words);
 
@@ -60,6 +62,10 @@ class CosineSimilarity {
 
         $this->au = $au;
 
+//        $this->preview($au);
+
+//        echo '<pre>';print_r($au);
+
 // ==================================================== START HERE ==================================================
         // Script start
         $rustart = getrusage();
@@ -68,19 +74,24 @@ class CosineSimilarity {
 
         $countTF = $this->countTF($au,$this->words);
 
+//        echo '<pre>';print_r($countTF);
+
+//        $countDF = $this->countDF($this->TF_count);
         $countDF = $this->countDF($this->TF_count);
-
+//
         $countDDFi = $this->countDDFi($countDF);
-
+//
         $countIDF = $this->countIDF($countDDFi);
-
+//
         $countW_TFIDF = $this->countW_TFIDF($countTF, $countIDF);
-
+//
         $countDP = $this->countDotProd();
-        $countDP = $this->countVectorLength();
+        $countVL = $this->countVectorLength();
         $count_CS = $this->countCoSim();
 
         $this->showResult();
+
+// ==================================================== END MAIN JOB , HERE ==================================================
 
         // Script end
         function rutime($ru, $rus, $index) {
@@ -89,45 +100,75 @@ class CosineSimilarity {
         }
 
         $ru = getrusage();
-        echo "This process used " . rutime($ru, $rustart, "utime") .
-            " ms for its computations\n";
-        echo "It spent " . rutime($ru, $rustart, "stime") .
-            " ms in system calls\n";
+        echo "Proses memerlukan waktu selama " . rutime($ru, $rustart, "utime") .
+            " ms untuk komputasi keseluruhan\n";
+        echo "Proses ini memerlukan waktu " . rutime($ru, $rustart, "stime") .
+            " ms dalam Sistem Call \n";
+
+    }
+
+    public function preview($var){
+        echo '<pre>';
+        print_r($var);
+        echo '</pre>';
 
     }
 
     public function nonzero($var){
         return ($var & 0);
     }
+
+    public function division($a, $b){
+        if($b == 0) return null;
+        return $a/$b;
+    }
+
     /**
      * @param $key_word Array Uniq as Index
      * @param $arr_word Word
      * @return array
      */
     public function countTF($key_word, $arr_word){
+//        Sort Ascending of Key word (uniq words)
         asort($key_word);
 
 //      Remove Last Array from Word
 //        array_pop($arr_word);
 
-        $mtx_count_qr = [];
+//        $mtx_count_qr = [];
+
         $mtx_count_data = [];
 
         foreach ($key_word as $au_idx){
             $i = 0;
-            $au_idx = strval($au_idx);
+//            $au_idx = strval($au_idx);
+
+//            TODO: Focus here!!!
+//          The trick, manipulate Numeric with adding a 'dot'
+            if(is_numeric($au_idx)) $au_idx = '.'.$au_idx;
+
+            $w = (strpos($au_idx, '.') === 0) ? substr($au_idx, 1): $au_idx;
+
             foreach ($arr_word as $w_idx){
-                if($i===$this->num_d){
-                    $mtx_count_qr[$au_idx][] = count(array_keys($w_idx,$au_idx));
+                if($i===0){
+                    $mtx_count_qr[$au_idx][] = count(array_keys($w_idx,$w));
                 } else {
-                    $mtx_count_data[$au_idx][] = count(array_keys($w_idx,$au_idx));
+                    $mtx_count_data[$au_idx][] = count(array_keys($w_idx,$w));
                 }
+
+//              Get All Words Stats
+                $mtx_count_word[$au_idx][] = count(array_keys($w_idx, $w));
 
                 $i++;
             }
         }
 
-        $mtx_count = array_merge_recursive($mtx_count_qr,$mtx_count_data);
+//      TODO: size array not compatible
+//        $mtx_count_each_d = array_merge_recursive($mtx_count_qr,$mtx_count_data);
+
+        if (!empty($mtx_count_word)) {
+            $mtx_count_each_d = $mtx_count_word;
+        }
 
         function word_exist($number){
             // select not zero
@@ -136,18 +177,24 @@ class CosineSimilarity {
 
         }
 
+//        Count Data Only
         foreach ($mtx_count_data as $key => $val){
             foreach ($val as $k => $v){
-                $new_mtx[$key] = array_map('word_exist', $val);
+                $mtx_count_all_d[$key] = array_map('word_exist', $val);
             }
         }
 
-        if (!empty($mtx_count) && !empty($new_mtx)) {
-            $this->TF_each = $mtx_count;
-            $this->TF_count = $new_mtx;
+        if (!empty($mtx_count_each_d) && !empty($mtx_count_all_d)) {
+//          For display purpose
+            $this->TF_each = $mtx_count_each_d;
+//          For count purpose
+            $this->TF_count = $mtx_count_all_d;
         }
 
-        return $mtx_count;
+//        echo 'matrix :<pre>';print_r($mtx_count_each_d);
+//        echo 'matrix :<pre>';print_r(sizeof($mtx_count_all_d));
+
+        return $this->TF_each;
 
     }
 
@@ -172,20 +219,23 @@ class CosineSimilarity {
      * @return null
      */
     public function countDDFi($df){
-//        echo '<pre>';print_r($df);
+//       Get Input from Data Frequency
         foreach($df as $k => $v) {
-
+//          Check divisor is 0
             if ($v === 0){
-                $result[$k] = 0;
+                $result[$k] = null;
             } else {
-                $result[$k] = $this->num_d/$v;
+                $result[$k] = number_format((float) $this->num_d/$v,4)+0;
             }
         }
+
+//        $this->preview($result);
 
         if(!empty($result)) {
             $this->DDFi = $result;
             return $result;
         }
+
         return null;
     }
 
@@ -194,7 +244,7 @@ class CosineSimilarity {
      * @return null
      */
     public function countIDF($ddfi){
-        foreach($ddfi as $k => $v) $result[$k] = number_format((float)log($v,10),4);
+        foreach($ddfi as $k => $v) $result[$k] = number_format((float)log($v,10),4)+0;
         if(!empty($result)) {
             $this->idf = $result;
             return $result;
@@ -212,6 +262,8 @@ class CosineSimilarity {
     public function countW_TFIDF($tf, $idf){
 //      TODO
 
+//        echo '<pre>';print_r($tf);
+
         foreach ($tf as $k => $v){
             for($i=0;$i<sizeof($v);$i++){
 //                TODO : undefined offset 0 3 4 5
@@ -220,7 +272,9 @@ class CosineSimilarity {
 //                if(is_integer($k)){
 //                    $k = strval($k);
 //                }
-                $res[$k][] = $v[$i] * $idf[$k] ;
+//                sprintf("%0.2f",$a)
+                $res[$k][] = number_format((float) $v[$i] * $idf[$k], 4, '.', '')+0 ;
+//                $res[$k][] = sprintf("%0.2f", number_format((float) $v[$i] * $idf[$k], 4) );
             }
         }
 
@@ -254,7 +308,7 @@ class CosineSimilarity {
     public function countVectorLength(){
 
         foreach ($this->w_tfidf as $k => $v){
-            $result[$k] = array_map(function ($var){ return (pow($var,2));}, $v);
+            $result[$k] = array_map(function ($var){ return (number_format(pow($var,2), 4)+0);}, $v);
 
         }
         if (!empty($result)) {
@@ -263,6 +317,7 @@ class CosineSimilarity {
         return null;
 
     }
+
 
     public function countCoSim(){
 
@@ -286,9 +341,11 @@ class CosineSimilarity {
         $sqrt_sum = array_map(function($var){ return sqrt($var);}, $sumVL);
 
         foreach ($sumDP as $item => $val) {
-//            $cossim[] = $val / ($sqrt_sum[0]*$sqrt_sum[$item+1])*100;
-            $cossim[] = number_format($val / ($sqrt_sum[0]*$sqrt_sum[$item+1])*100, 2);
-//        number_format((float)log($v,10),4)
+
+//          TODO :  potentially division by zero, solved.
+
+            $cossim[] = number_format($this->division($val , ($sqrt_sum[0]*$sqrt_sum[$item+1])*100), 4);
+
         }
 
         if (!empty($cossim)) {
@@ -306,6 +363,9 @@ class CosineSimilarity {
 
     }
 
+    /** Display Result as
+     * @return null
+     */
     public function showResult(){
 
         foreach ($this->cos_sim as $k => $v){
@@ -313,6 +373,7 @@ class CosineSimilarity {
         }
 
         if (!empty($resultShow)) {
+            $this->preview(sizeof($resultShow));
             $this->show_result = $resultShow;
 //            print_r($resultShow);
         }
@@ -320,6 +381,8 @@ class CosineSimilarity {
         return null;
     }
 
+
+//    =========================================== OPTIONAL TO USE =======================================
     public function nested_foreach($i){
 
         if(count($i)>1 && $i!=null){
@@ -332,7 +395,7 @@ class CosineSimilarity {
             }
         } else {
             echo "<pre>";
-            print_r(count($i));
+//            print_r(count($i));
             echo "</pre>";
             $strtemp[] = $i;
         }
