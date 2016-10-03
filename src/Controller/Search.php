@@ -41,20 +41,30 @@ class Search extends BaseController
 //        $d[1] = "Delivery of silver arrived in a silver truck";
 //        $d[2] = "Shipment of gold arrived in a truck";
 //        $d[3] = "Delivery and Shipment of gold arrived from a truck";
+
+        $d[0] = "Algoritma dan Teknik Pemrograman";
+        $d[0] = "konsep dan aplikasi sistem pendukung keputusan";
+        $d[1] = "sistem neuro fuzzy canggih";
+        $d[2] = "pengantar struktur data dan algoritma";
+        $d[3] = "pengantar logika informatika algoritma";
 //        echo '<pre>';print_r($d);
 //        echo '<pre>';print_r($qr);
 
 //        $cs = new CosineSimilarity($d,$qr);
-//        $cs = new CosineSimilarity($qr, $d);
+
+        $cs = new CosineSimilarity($qr, $d);
+
+// =========================================================================================
+//        Use Database
 //        $cs = new CosineSimilarity($data_num,$qr);
+//        $cs = new CosineSimilarity($qr, $data_num);
 
-        $cs = new CosineSimilarity($qr, $data_num);
-
+//        Show The result
         $tableShow = new ShowDisplay($cs);
 
 //        $tableShow->TableShow();
 
-//# SHOW RESULT
+//# SHOW RESULT As List
         $tableShow->TableShowResult();
     }
 

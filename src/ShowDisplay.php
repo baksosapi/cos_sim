@@ -9,7 +9,7 @@
 class ShowDisplay{
 
     protected $cs;
-    protected $data_table;
+//    protected $data_table;
     protected $data_show;
     protected $data_show_result;
     protected $red = '';
@@ -109,16 +109,105 @@ class ShowDisplay{
      *
      */
     public function TableShowResult(){
+?>
+        <style>
+            .error-notice {
+                margin: 5px 5px; /* Make sure to keep some distance from all side */
+            }
 
+            .oaerror {
+                width: 90%; /* Configure it fit in your design  */
+                margin: 0 auto; /* Centering Stuff */
+                background-color: #FFFFFF; /* Default background */
+                padding: 20px;
+                border: 1px solid #eee;
+                border-left-width: 5px;
+                border-radius: 3px;
+                margin: 0 auto;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 16px;
+            }
 
+            .danger {
+                border-left-color: #d9534f; /* Left side border color */
+                background-color: rgba(217, 83, 79, 0.1); /* Same color as the left border with reduced alpha to 0.1 */
+            }
+
+            .danger strong {
+                color: #d9534f;
+            }
+
+            .warning {
+                border-left-color: #f0ad4e;
+                background-color: rgba(240, 173, 78, 0.1);
+            }
+
+            .warning strong {
+                color: #f0ad4e;
+            }
+
+            .info {
+                border-left-color: #5bc0de;
+                background-color: rgba(91, 192, 222, 0.1);
+            }
+
+            .info strong {
+                color: #5bc0de;
+            }
+
+            .success {
+                border-left-color: #2b542c;
+                background-color: rgba(43, 84, 44, 0.1);
+            }
+
+            .success strong {
+                color: #2b542c;
+            }
+
+        </style>
+<?php
         function print_list(&$item, $key) {
-            echo('<ul>'.'<li>'.$key.'</li><li>'.implode('%</li><li>', $item).'%</li>'.'</ul>');
+//            echo('<ul class="ul">'.'<li>'.$key.'</li><li>'.implode('%</li><li>', $item).'</li>'.'</ul>');
+
+            echo (
+                '<div class="row">'.
+                '<div class="col-md-100 col-md-offset-0">'.
+                '<br><br>'.
+                '<div class="error-notice">'.
+                '<div class="oaerror danger">'.
+                '<strong>Title</strong> - '. $item[1].
+                '</div>'.
+                '<div class="oaerror warning">'.
+                '<strong>Url</strong> - <a href="<?= $row[\'url\'] ?>"><?= $row[\'url\'] ?></a>'.
+                '</div>'.
+                '<div class="oaerror info">'.
+                '<strong>Page Rank</strong> - <?= $row[\'pr\'] ?>'.
+                '</div>'.
+                '<div class="oaerror success">'.
+                '<strong>TF-IDF: '.$item[0].' &amp; HITS</strong> - <?= "0" ?>'.
+                '</div>'.
+                '</div>'.
+                '</div>'.
+                '</div>'
+            );
+
         }
         ?>
-
         <table border="1">
-            <?php array_walk($this->data_table->show_result, 'print_list');?>
+            <?php
+
+            $results_data = $this->data_table->getShowResult();
+
+//            $this->preview($this->data_table->getShowResult());
+//            array_walk($this->data_table->getShowResult(), 'print_list');
+
+            array_walk($results_data, 'print_list');
+            ?>
         </table>
+
+<!--        ALTERNATE -->
+
+
 
         <?php
     }

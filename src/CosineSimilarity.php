@@ -24,7 +24,8 @@ class CosineSimilarity {
     public $VectorLength;
     public $length_vector;
     public $cos_sim;
-    public $show_result;
+
+//    protected $show_result;
 
 //    public function __construct($d,$q){
     public function __construct($q,$d){
@@ -344,7 +345,7 @@ class CosineSimilarity {
 
 //          TODO :  potentially division by zero, solved.
 
-            $cossim[] = number_format($this->division($val , ($sqrt_sum[0]*$sqrt_sum[$item+1])*100), 4);
+            $cossim[] = number_format($this->division($val , ($sqrt_sum[0]*$sqrt_sum[$item+1])*100), 16);
 
         }
 
@@ -352,6 +353,7 @@ class CosineSimilarity {
             foreach ($cossim as $k => $v){
                 $rank[] = $v;
             }
+
             // Sort Result Ascending
             arsort($rank, SORT_NUMERIC);
 
@@ -373,9 +375,15 @@ class CosineSimilarity {
         }
 
         if (!empty($resultShow)) {
-            $this->preview(sizeof($resultShow));
+
+            // Remove Element query
+//            array_shift($resultShow);
+
+//            $this->preview($resultShow);
+//            $this->preview(sizeof($resultShow));
+
             $this->show_result = $resultShow;
-//            print_r($resultShow);
+
         }
 
         return null;
@@ -537,7 +545,9 @@ class CosineSimilarity {
      */
     public function getShowResult()
     {
-        return $this->show_result;
+        if (!empty($this->show_result)) {
+            return $this->show_result;
+        }
     }
 
     /**
