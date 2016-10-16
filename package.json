@@ -1,0 +1,1187 @@
+{
+  "name": "application-name",
+  "version": "0.0.1",
+  "classification" :{
+    "UDC" : {},
+    "LOC" : {},
+    "DDC" : {
+      "000": "Karya Umum, Komputer",
+      "100":"Filsafat, Psikologi",
+      "200":"Agama",
+      "300":"Sosial",
+      "400":"Bahasa",
+      "500":"Sains, Matematika",
+      "600":"Teknologi Terapan",
+      "700":"Kesenian, Hiburan, Olahraga",
+      "800":"Sastra",
+      "900":"Geografi, Sejarah"
+    },
+    Ringkasan
+
+    Pertama Ringkasan
+
+    Sepuluh Main Kelas
+
+    000 ilmu komputer, informasi & karya umum
+    100 Filsafat & psikologi
+    200 Agama
+    300 Ilmu Sosial
+    400 Bahasa
+    500 Sains
+    600 Teknologi
+    700 Seni & rekreasi
+    800 Sastra
+    900 Sejarah & geografi
+
+    Kedua Ringkasan
+
+    Seratus Divisi
+
+    000 Ilmu komputer, pengetahuan & sistem
+    010 Bibliografi
+    020 Perpustakaan & informasi ilmu
+    030 Ensiklopedia & buku fakta
+    040 [Unassigned]
+050 Majalah, jurnal & serials
+060 Asosiasi, organisasi & museum
+070 Berita media, jurnalisme & penerbitan
+080 Kutipan
+090 Naskah & buku langka
+100 Filsafat
+110 Metafisika
+120 Epistemologi
+130 Parapsikologi & okultisme
+140 Filosofis sekolah pemikiran
+150 Psikologi
+160 Logika
+170 Etika
+180 Kuno filsafat, abad pertengahan & Timur
+190 Filsafat barat modern
+200 Agama
+210 Filsafat & teori agama
+220 Alkitab
+230 Kristen & teologi Kristen
+240 Christian praktek & ketaatan
+250 praktek pastoral Kristen & perintah agama
+260 Christian organisasi kerja, sosial & ibadah
+270 Sejarah Kekristenan
+280 Kristen denominasi
+290 lain agama
+300 ilmu Sosial, sosiologi antropologi &
+310 Statistik
+320 Ilmu politik
+330 Ekonomi
+340 Hukum
+350 Administrasi publik & ilmu militer
+360 sosial masalah & layanan sosial
+370 Pendidikan
+380 Commerce, komunikasi & transportasi
+390 Bea Cukai, etiket & cerita rakyat
+400 Bahasa
+410 Linguistik
+420 Bahasa Inggris & bahasa Inggris Kuno
+430 Jerman & terkait bahasa
+440 French & terkait bahasa
+450 Italia, Rumania & terkait bahasa
+460 Spanyol & Portugis bahasa
+470 Latin & Italic bahasa
+480 Yunani Klasik & modern bahasa
+490 Bahasa lainnya
+
+500 Sains
+510 Matematika
+520 Astronomi
+530 Fisika
+540 Kimia
+550 Ilmu Bumi & Geologi
+560 Fosil & kehidupan prasejarah
+570 Hidup ilmu; biologi
+580 Tanaman (Botani)
+590 Hewan (Zoologi)
+600 Teknologi
+610 Kedokteran & Kesehatan
+620 Rekayasa
+630 Pertanian
+640 Rumah & manajemen keluarga
+650 Manajemen & public relations
+660 Teknik kimia
+670 Manufaktur
+680 Industri untuk keperluan tertentu
+690 Bangunan & konstruksi
+700 Seni
+710 Landscaping & perencanaan wilayah
+720 Arsitektur
+730 Patung, keramik & logam
+740 Menggambar & seni dekoratif
+750 Lukisan
+760 Graphic seni
+770 Fotografi & seni komputer
+780 Musik
+790 Olahraga, permainan & hiburan
+800 Sastra, retorika & kritik
+810 sastra Amerika dalam bahasa Inggris
+820 Bahasa Inggris literatur Inggris & Old
+830 Jerman & terkait literatur
+840 French & terkait literatur
+850 Italia, Rumania & terkait literatur
+860 Spanyol & Portugis literatur
+870 Latin & Italic literatur
+880 Yunani Klasik & modern literatur
+890 lainnya literatur
+900 Sejarah
+910 Geografi & travel
+920 Biografi & silsilah
+930 Sejarah dunia kuno (untuk ca. 499)
+940 Sejarah Eropa
+950 Sejarah Asia
+960 Sejarah Afrika
+970 Sejarah Amerika Utara
+980 Sejarah Amerika Selatan
+990 Sejarah daerah lain
+
+Ketiga Ringkasan
+
+Seribu Bagian
+
+000 ilmu komputer, informasi & karya umum
+001 Pengetahuan
+002 Buku
+003 Sistem
+004 Pengolahan data & ilmu komputer
+005 Komputer pemrograman, program & data
+006 metode komputer Khusus
+007 [Unassigned]
+008 [Unassigned]
+009 [Unassigned]
+010 Bibliografi
+011 Bibliografi
+012 Bibliografi individu
+013 [Unassigned]
+014 Dari karya-karya anonim & pseudonim
+015 Bibliografi karya dari tempat tertentu
+016 Bibliografi karya pada mata pelajaran tertentu
+017 katalog subjek Umum
+018 Katalog diatur oleh penulis, tanggal, dll
+019 Kamus katalog
+020 Perpustakaan & informasi ilmu
+021 Perpustakaan hubungan
+022 Administrasi tanaman fisik
+023 Personil manajemen
+024 [Unassigned]
+025 Perpustakaan operasi
+026 Perpustakaan untuk mata pelajaran tertentu
+027 Umum perpustakaan
+028 Membaca & penggunaan media informasi lainnya
+029 [Unassigned]
+030 ensiklopedis karya Umum
+031 Ensiklopedi dalam bahasa Inggris Amerika
+032 Ensiklopedia dalam bahasa Inggris
+033 Dalam bahasa Jerman lainnya
+034 Ensiklopedi dalam bahasa Perancis, Occitan & Catalan
+035 Di Italia, Rumania & terkait bahasa
+036 Ensiklopedia dalam bahasa Spanyol & Portugis
+037 Ensiklopedi dalam bahasa Slavia
+038 Ensiklopedi dalam bahasa Skandinavia
+039 Ensiklopedi dalam bahasa lain
+040 [Unassigned]
+041 [Unassigned]
+042 [Unassigned]
+043 [Unassigned]
+044 [Unassigned]
+045 [Unassigned]
+046 [Unassigned]
+047 [Unassigned]
+048 [Unassigned]
+049 [Unassigned]
+
+050 seri publikasi Umum
+051 Serials dalam bahasa Inggris Amerika
+052 Serials dalam bahasa Inggris
+053 Serials dalam bahasa Jermanik lainnya
+054 Serials dalam bahasa Prancis, Occitan & Catalan
+055 Di Italia, Rumania & terkait bahasa
+056 Serials dalam bahasa Spanyol & Portugis
+057 Serials dalam bahasa Slavia
+058 Serials dalam bahasa Skandinavia
+059 Serials dalam bahasa lain
+060 Umum organisasi & museum ilmu pengetahuan
+061 Organisasi di Amerika Utara
+062 Organisasi di Kepulauan Inggris; di Inggris
+063 Organisasi di pusat Eropa; di Jerman
+064 Organisasi di Perancis & Monako
+065 Organisasi di Italia & pulau-pulau yang berdekatan
+066 Di Semenanjung Iberia & pulau-pulau yang berdekatan
+067 Organisasi di Eropa Timur; di Rusia
+068 Organisasi di wilayah geografis lainnya
+069 Museum ilmu
+070 Berita media, jurnalisme & penerbitan
+071 Surat Kabar di Amerika Utara
+072 Surat Kabar di Kepulauan Inggris; di Inggris
+073 Surat Kabar di pusat Eropa; di Jerman
+074 Koran di Perancis & Monako
+075 Koran di Italia & pulau-pulau yang berdekatan
+076 Di Semenanjung Iberia & pulau-pulau yang berdekatan
+077 Koran di Eropa Timur; di Rusia
+078 Koran di Skandinavia
+079 Koran di wilayah geografis lainnya
+080 Umum koleksi
+081 Koleksi dalam bahasa Inggris Amerika
+082 Koleksi dalam bahasa Inggris
+083 Koleksi dalam bahasa Jermanik lainnya
+084 Koleksi dalam bahasa Prancis, Occitan & Catalan
+085 Di Italia, Rumania & terkait bahasa
+086 Koleksi dalam bahasa Spanyol & Portugis
+087 Koleksi dalam bahasa Slavia
+088 Koleksi dalam bahasa Skandinavia
+089 Koleksi dalam bahasa lain
+090 Naskah & buku langka
+091 Naskah
+092 Blok buku
+093 incunabula
+094 Dicetak buku
+095 penting untuk binding Buku
+096 penting untuk ilustrasi Buku
+097 terkenal untuk kepemilikan atau asal Buku
+098 karya Dilarang, pemalsuan & hoax
+099 terkenal untuk format Buku
+
+100
+
+100 Filsafat & psikologi
+101 Teori filsafat
+102 Miscellany
+103 Kamus & ensiklopedi
+104 [Unassigned]
+105 Serial publikasi
+106 Organisasi & manajemen
+107 Pendidikan, penelitian & topik terkait
+108 Jenis pengobatan orang
+109 Sejarah & mengumpulkan orang pengobatan
+110 Metafisika
+111 Ontologi
+112 [Unassigned]
+113 Kosmologi
+114 Ruang
+115 Waktu
+116 Perubahan
+117 Struktur
+118 Angkatan & energi
+119 Jumlah & kuantitas
+120 Epistemologi, sebab-akibat & manusia
+121 Epistemologi
+122 Penyebab
+123 Determinisme & indeterminisme
+124 teleologi
+125 [Unassigned]
+126 Diri
+127 Ketidaksadaran & alam bawah sadar
+128 Manusia
+129 Origin & nasib jiwa individu
+130 Parapsikologi & okultisme
+131 parapsikologi & okultisme metode
+132 [Unassigned]
+133 Khusus topik di parapsikologi & okultisme
+134 [Unassigned]
+135 Mimpi & misteri
+136 [Unassigned]
+137 Divinatory graphology
+138 fisiognomi
+139 Phrenology
+140 filosofis sekolah khusus
+141 Idealisme & sistem terkait
+142 Kritis filsafat
+143 Bergsonism & intuitionism
+144 Humanisme & sistem terkait
+145 Sensasionalisme
+146 Naturalisme & sistem terkait
+147 Panteisme & sistem terkait
+Eklektisisme 148, liberalisme & tradisionalisme
+149 filosofis Sistem lain
+
+150 Psikologi
+151 [Unassigned]
+152 Persepsi, gerakan, emosi & drive
+153 Mental proses & kecerdasan
+154 Bawah Sadar & negara diubah
+155 Differential & psikologi perkembangan
+156 Perbandingan psikologi
+157 [Unassigned]
+158 Terapan Psikologi
+159 [Unassigned]
+160 Logika
+161 Induksi
+Pengurangan 162
+163 [Unassigned]
+164 [Unassigned]
+165 Fallacies & sumber kesalahan
+166 silogisme
+167 Hipotesis
+168 Argumen & persuasi
+169 Analogi
+170 Etika
+171 Etis sistem
+172 Politik etika
+173 Etika hubungan keluarga
+174 Kerja etika
+175 Etika rekreasi & olahraga
+176 Etika seks & reproduksi
+177 Etika hubungan sosial
+178 Etika konsumsi
+179 etika norma lain
+180 Kuno filsafat, abad pertengahan & Timur
+181 Eastern filsafat
+182 Pra-Sokrates Yunani filsafat
+183 Sokrates & filosofi terkait
+184 Platonis filsafat
+185 Aristotelian filsafat
+186 Skeptic & Neoplatonic filsafat
+187 Epicurean filsafat
+188 Stoic filsafat
+189 Filsafat Barat Abad Pertengahan
+190 Filsafat barat modern
+191 Filsafat Amerika Serikat & Kanada
+192 Filsafat Kepulauan Inggris
+193 Filsafat Jerman & Austria
+194 Filsafat Perancis
+195 Filsafat Italia
+196 Filsafat Spanyol & Portugal
+197 Filsafat Uni Soviet
+198 Filsafat Skandinavia
+199 Filsafat di wilayah geografis lainnya
+
+200
+
+200 Agama
+201 Agama mitologi & teologi sosial
+202 Doktrin
+203 Public ibadah & praktek lainnya
+Pengalaman Agama 204, kehidupan & praktek
+205 Agama etika
+206 Pemimpin & organisasi
+207 Misi & pendidikan agama
+208 Sumber
+209 Sekte & gerakan reformasi
+210 Filsafat & teori agama
+211 Konsep Tuhan
+212 Keberadaan, knowability & sifat Allah
+213 Penciptaan
+214 Teodisi
+215 Sains & agama
+216 [Unassigned]
+217 [Unassigned]
+218 Manusia
+219 [Unassigned]
+220 Alkitab
+221 Perjanjian Lama (Tanakh)
+222 Sejarah kitab Perjanjian Lama
+223 Puitis kitab Perjanjian Lama
+224 Nabi kitab Perjanjian Lama
+225 Perjanjian Baru
+226 Injil & Kisah
+227 Surat-surat
+228 Wahyu (Apocalypse)
+229 Apokrif & pseudepigrapha
+230 Kristen & teologi Kristen
+231 Tuhan
+232 Yesus Kristus & keluarganya
+233 Manusia
+234 Keselamatan & rahmat
+235 Spiritual makhluk
+236 Eskatologi
+237 [Unassigned]
+238 Kredo & katekismus
+239 Apologetics & polemik
+240 bermoral & renungan teologi Kristen
+241 etika Kristen
+242 Renungan literatur
+243 Evangelistic tulisan untuk individu
+244 [Unassigned]
+245 [Unassigned]
+246 Penggunaan seni dalam kekristenan
+247 Gereja perabot & artikel
+248 Christian pengalaman, praktik & kehidupan
+249 Christian perayaan dalam kehidupan keluarga
+
+250 Christian perintah & gereja lokal
+251 Khotbah
+252 Teks khotbah
+253 Pastoral kantor & kerja
+254 Paroki administrasi
+255 Agama jemaat & perintah
+256 [Unassigned]
+257 [Unassigned]
+258 [Unassigned]
+259 Pastoral perawatan keluarga & jenis orang
+260 Sosial & gerejawi teologi
+261 Sosial Teologi
+262 Eklesiologi
+263 Hari, waktu & tempat ketaatan
+264 Public ibadah
+265 Sakramen, ritus lainnya & tindakan
+266 Misi
+267 Asosiasi untuk pekerjaan agama
+268 Pendidikan agama
+269 ​​Spiritual pembaharuan
+270 Sejarah Kristen & gereja Kristen
+271 Agama perintah dalam sejarah gereja
+272 Penganiayaan dalam sejarah gereja
+273 Ajaran kontroversi & bid’ah
+274 Sejarah Kekristenan di Eropa
+275 Sejarah Kekristenan di Asia
+276 Sejarah Kekristenan di Afrika
+277 Sejarah Kekristenan di Amerika Utara
+278 Sejarah Kekristenan di Amerika Selatan
+279 Sejarah Kristen di daerah lain
+280 Kristen denominasi & sekte
+281 Awal Gereja & gereja-gereja Timur
+282 Gereja Katolik Roma
+283 Anglikan gereja
+284 Protestan asal Kontinental
+285 Presbyterian, Reformasi & Congregational
+286 Pembaptis, Murid-murid Kristus & Advent
+287 Methodist & gereja terkait
+288 [Unassigned]
+289 denominasi lain & sekte
+290 lain agama
+291 [Unassigned]
+292 Yunani & Romawi agama
+293 Jermanik agama
+294 Agama asal Indic
+295 Zoroastrianisme
+296 Yudaisme
+297 Islam, Babism & Bahai Faith
+298 (nomor Opsional)
+299 Agama tidak disediakan untuk tempat lain
+
+300
+
+300 Ilmu Sosial
+301 Sosiologi & antropologi
+302 interaksi sosial
+303 Sosial proses
+304 Faktor yang mempengaruhi perilaku sosial
+305 Kelompok sosial
+306 Budaya & lembaga
+307 Masyarakat
+308 [Unassigned]
+309 [Unassigned]
+310 Koleksi umum statistik
+311 [Unassigned]
+312 [Unassigned]
+313 [Unassigned]
+314 Umum statistik Eropa
+315 Umum statistik Asia
+316 Umum statistik Afrika
+317 Umum statistik Amerika Utara
+318 Umum statistik Amerika Selatan
+319 Umum statistik daerah lain
+320 Ilmu politik
+321 Sistem pemerintah & negara
+322 Hubungan negara kepada kelompok-kelompok terorganisir
+323 Sipil & politik hak
+324 Proses politik
+325 Migrasi internasional & kolonisasi
+326 Perbudakan & emansipasi
+327 Hubungan internasional
+328 Proses legislatif
+329 [Unassigned]
+330 Ekonomi
+331 Buruh ekonomi
+332 Ekonomi Keuangan
+333 Ekonomi tanah & energi
+334 Koperasi
+335 Sosialisme & sistem terkait
+336 Umum keuangan
+337 Internasional Ekonomi
+338 Produksi
+339 Ekonomi Makro & topik terkait
+340 Hukum
+341 Hukum bangsa
+342 Konstitusi & administrasi hukum
+343 Militer, pajak, perdagangan & industri hukum
+344 Buruh, sosial, pendidikan & budaya hukum
+345 Pidana Hukum
+346 Swasta hukum
+347 Prosedur Sipil & pengadilan
+Hukum 348, peraturan & kasus
+349 Hukum yurisdiksi tertentu & daerah
+
+350 Administrasi publik & ilmu militer
+351 Administrasi publik
+352 Umum pertimbangan administrasi publik
+353 khusus bidang administrasi publik
+354 Administrasi ekonomi & lingkungan
+355 Militer ilmu
+356 Infanteri pasukan perang &
+357 Mounted pasukan perang &
+358 Air & pasukan khusus lainnya
+359 Sea pasukan perang &
+360 Masalah-masalah sosial & layanan; asosiasi
+361 Sosial & masalah kesejahteraan sosial pada umumnya
+362 masalah kesejahteraan sosial & jasa
+363 sosial Masalah lain & jasa
+364 Kriminologi
+365 Pidana & instansi terkait
+366 Asosiasi
+367 Umum klub
+368 Asuransi
+369 Miscellaneous jenis asosiasi
+370 Pendidikan
+371 Sekolah & kegiatan mereka; pendidikan khusus
+372 Dasar Pendidikan
+373 Pendidikan Menengah
+374 Dewasa pendidikan
+375 Kurikulum
+376 [Unassigned]
+377 [Unassigned]
+378 pendidikan tinggi
+379 Public policy issues in education
+380 Commerce, komunikasi & transportasi
+381 Commerce
+382 International commerce
+383 Postal communication
+384 Communications; telecommunication
+385 Railroad transportation
+386 Inland waterway & ferry transportation
+387 Water, air & space transportation
+388 Transportation; ground transportation
+389 Metrology & standardization
+390 Bea Cukai, etiket & cerita rakyat
+391 Costume & personal appearance
+392 Pabean dari siklus hidup & kehidupan rumah tangga
+393 Death customs
+394 General customs
+395 Etiquette (Manners)
+396 [Unassigned]
+397 [Unassigned]
+398 Folklore
+399 Customs of war & diplomacy
+
+400
+
+400 Bahasa
+401 Filsafat & Teori
+402 Miscellany
+403 Kamus & ensiklopedi
+404 Topik-topik khusus
+405 Serial publikasi
+406 Organisasi & manajemen
+407 Pendidikan, penelitian & topik terkait
+408 Jenis pengobatan orang
+409 Geografis & orang pengobatan
+410 Linguistik
+411 Menulis sistem
+412 Etimologi
+413 Kamus
+414 Fonologi & fonetik
+415 Grammar
+416 [Unassigned]
+417 Dialektologi & linguistik historis
+418 Standard & penggunaan linguistik terapan
+419 Sign bahasa
+420 Bahasa Inggris & Inggris Kuno
+421 sistem tulisan bahasa Inggris & fonologi
+422 etimologi bahasa Inggris
+423 Bahasa Inggris kamus
+424 [Unassigned]
+425 tata bahasa Inggris
+426 [Unassigned]
+427 variasi bahasa Inggris
+428 penggunaan bahasa Inggris Standard
+429 Old Inggris (Anglo-Saxon)
+430 Jermanik bahasa; Jerman
+431 sistem penulisan Jerman & fonologi
+432 German etimologi
+433 German kamus
+434 [Unassigned]
+435 German grammar
+436 [Unassigned]
+437 variasi bahasa Jerman
+438 penggunaan Standar Jerman
+439 Jermanik Bahasa lain
+440 Romantis bahasa; Perancis
+441 sistem penulisan French & fonologi
+442 French etimologi
+443 French kamus
+444 [Unassigned]
+445 French tata bahasa
+446 [Unassigned]
+447 variasi bahasa Perancis
+448 penggunaan French Standard
+449 Occitan & Catalan
+
+450 Italia, Rumania & terkait bahasa
+451 sistem penulisan Italian & fonologi
+452 Italia etimologi
+453 Italia kamus
+454 [Unassigned]
+455 Italia tata bahasa
+456 [Unassigned]
+457 variasi bahasa Italia
+458 penggunaan Standar Italia
+459 Rumania & terkait bahasa
+460 Spanyol & Portugis bahasa
+461 sistem penulisan Spanyol & fonologi
+462 Spanyol etimologi
+463 Spanyol kamus
+464 [Unassigned]
+465 tata bahasa Spanyol
+466 [Unassigned]
+467 variasi bahasa Spanyol
+468 penggunaan Spanyol Standar
+469 Portugal
+470 Italic bahasa; Latin
+471 tulisan Latin Klasik & fonologi
+472 Latin Klasik etimologi
+473 Latin Klasik kamus
+474 [Unassigned]
+475 tata bahasa Latin Klasik
+476 [Unassigned]
+477 Old, postclassical & Vulgar Latin
+478 penggunaan Latin Klasik
+479 Italic bahasa lain
+480 Hellenic bahasa; Yunani klasik
+481 tulisan Yunani Klasik & fonologi
+Yunani Klasik 482 etimologi
+483 Yunani Klasik kamus
+484 [Unassigned]
+485 tata bahasa Yunani Klasik
+486 [Unassigned]
+487 Preclassical & postclassical Yunani
+488 penggunaan Yunani Klasik
+489 Lain Hellenic bahasa
+490 Bahasa lainnya
+491 East Indo-Eropa & Celtic bahasa
+492 Afro-Asiatik bahasa; bahasa Semit
+493 Non-Semit Afro-Asiatik bahasa
+494 Altai, Uralic, Hyperborean & Dravida
+495 Bahasa Timur & Asia Tenggara
+496 African bahasa
+497 Amerika Utara asli bahasa
+498 South asli bahasa Amerika
+499 Austronesia & bahasa lain
+
+500
+
+500 Ilmu Pengetahuan Alam dan Mathemetics
+501 Filsafat & Teori
+502 Miscellany
+503 Kamus & ensiklopedi
+504 [Unassigned]
+505 Serial publikasi
+506 Organisasi & manajemen
+507 Pendidikan, penelitian & topik terkait
+508 Sejarah Alam
+509 Sejarah, geografis & orang pengobatan
+510 Matematika
+511 Prinsip-prinsip umum matematika
+512 Aljabar
+513 Aritmatika
+514 Topologi
+515 Analisis
+516 Geometri
+517 [Unassigned]
+518 Numerik analisis
+519 Probabilitas & matematika terapan
+520 Astronomi & bersekutu ilmu
+521 Celestial mekanika
+522 Teknik, peralatan & bahan
+523 benda angkasa Tertentu & fenomena
+524 [Unassigned]
+525 Earth (Astronomical geografi)
+526 Matematika geografi
+527 Celestial navigasi
+528 Ephemerides
+529 Kronologi
+530 Fisika
+531 klasik mekanik; mekanika padat
+532 Mekanika fluida; mekanik cair
+533 Gas mekanika
+534 Suara & getaran terkait
+535 Light & fenomena inframerah & ultraviolet
+536 Panas
+537 Listrik & elektronik
+538 Magnetisme
+539 modern fisika
+540 Kimia & bersekutu ilmu
+541 Fisik kimia
+542 Teknik, peralatan & bahan
+543 Kimia analitik
+544 [Unassigned]
+545 [Unassigned]
+546 anorganik kimia
+547 Kimia organik
+548 Kristalografi
+549 Mineralogi
+
+550 Ilmu Bumi
+551 Geologi, hidrologi & meteorologi
+552 Petrologi
+553 Ekonomi geologi
+554 Ilmu Bumi Eropa
+555 Ilmu Bumi Asia
+556 Ilmu Bumi Afrika
+557 Bumi ilmu Amerika Utara
+558 Bumi ilmu Amerika Selatan
+559 Bumi ilmu dari daerah lain
+560 Paleontology; paleozoology
+561 paleobotani; mikroorganisme fosil
+562 Fosil invertebrata
+563 Fosil laut & pantai invertebrata
+564 Fosil moluska & molluscoids
+565 Fosil arthropoda
+566 Fosil chordates
+567 Fosil berdarah dingin vertebrata; ikan fosil
+568 Fosil burung
+569 Fosil mamalia
+570 Hidup ilmu; biologi
+571 Fisiologi & subjek terkait
+572 Biokimia
+573 fisiologis sistem khusus pada hewan
+574 [Unassigned]
+575 Spesifik bagian & sistem pada tanaman
+576 Genetika & evolusi
+577 Ekologi
+578 Sejarah Alam organisme
+Mikroorganisme 579, jamur & ganggang
+580 Tanaman (Botani)
+581 Khusus topik sejarah alam
+582 Tanaman dicatat untuk karakteristik & bunga
+583 Dicotyledons
+584 monokotil
+585 Gymnospermae; runjung
+586 tanpa biji tanaman
+587 tanpa biji tanaman Vascular
+588 bryophytes
+589 [Unassigned]
+590 Hewan (Zoologi)
+591 Khusus topik sejarah alam
+592 Invertebrata
+593 Kelautan & invertebrata pantai
+594 Moluska & molluscoids
+595 Arthropoda
+596 chordates
+597 berdarah dingin vertebrata; ikan
+598 Burung
+599 Mamalia
+
+600
+
+600 Teknologi
+601 Filsafat & Teori
+602 Miscellany
+603 Kamus & ensiklopedi
+604 Topik-topik khusus
+605 publikasi Serial
+606 Organisasi
+607 Pendidikan, penelitian & topik terkait
+608 Penemuan & paten
+609 Sejarah, geografis & orang pengobatan
+610 Kedokteran & Kesehatan
+611 Manusia anatomi, sitologi & histologi
+612 Manusia fisiologi
+613 Pribadi kesehatan & keselamatan
+614 Insiden & pencegahan penyakit
+615 Farmakologi & terapi
+616 Penyakit
+617 Bedah & spesialisasi medis terkait
+618 Ginekologi, kebidanan, pediatri & geriatri
+619 [Unassigned]
+620 Teknik & bersekutu operasi
+621 Terapan fisika
+622 Pertambangan & operasi yang berhubungan
+623 Militer & laut rekayasa
+624 Civil engineering
+625 Teknik kereta api & jalan
+626 [Unassigned]
+627 hidrolik rekayasa
+628 Sanitary & kota rekayasa
+629 lainnya cabang rekayasa
+630 Pertanian & teknologi yang terkait
+631 Teknik, peralatan & bahan
+632 luka Tanaman, penyakit & hama
+633 Bidang & perkebunan tanaman
+634 Orchards, buah-buahan & kehutanan
+635 Taman tanaman (Hortikultura)
+636 peternakan
+637 Pengolahan susu & produk terkait
+638 Serangga budaya
+Berburu 639, memancing & konservasi
+640 Rumah & manajemen keluarga
+641 Makanan & minuman
+642 Makanan & meja layanan
+643 Perumahan & peralatan rumah tangga
+644 Rumah Tangga utilitas
+645 Rumah Tangga perabotan
+646 jahit, pakaian & hidup pribadi
+647 Manajemen rumah tangga umum
+648 Rumah
+649 Anak pemeliharaan & perawatan rumah orang
+
+650 Manajemen & layanan tambahan
+651 Kantor Layanan
+652 Proses komunikasi tertulis
+653 Shorthand
+654 [Unassigned]
+655 [Unassigned]
+656 [Unassigned]
+657 Akuntansi
+658 Umum manajemen
+659 Iklan & PR
+660 Teknik kimia
+661 Industri kimia
+662 Bahan Peledak, bahan bakar & produk terkait
+663 Minuman Teknologi
+664 Makanan Teknologi
+665 Industri minyak, lemak, lilin & gas
+666 Keramik & bersekutu teknologi
+667 Cleaning, warna & teknologi pelapisan
+668 Teknologi produk organik lainnya
+669 Metalurgi
+670 Manufaktur
+671 Metalworking & produk logam primer
+672 Besi, baja & besi paduan lainnya
+673 Nonferrous logam
+674 Lumber pengolahan, produk kayu & gabus
+675 Kulit & pengolahan bulu
+676 Pulp & paper teknologi
+677 Tekstil
+678 Elastomer & produk elastomer
+679 Produk lainnya dari bahan tertentu
+680 Industri untuk keperluan tertentu
+681 Presisi instrumen & perangkat lain
+682 bekerja menempa Kecil (Blacksmithing)
+683 Hardware & peralatan rumah tangga
+684 Furnishings & lokakarya rumah
+685 Kulit, barang bulu & produk terkait
+686 Percetakan & kegiatan terkait
+687 Pakaian & aksesoris
+688 produk akhir lainnya & kemasan
+689 [Unassigned]
+690 Bangunan
+691 Bahan bangunan
+692 Auxiliary praktek konstruksi
+693 Spesifik bahan & tujuan
+694 Kayu konstruksi & pertukangan
+695 Penutup atap
+696 Utilitas
+697 Pemanasan, ventilasi & AC
+698 Detil menyelesaikan
+699 [Unassigned]
+
+700
+
+700 Seni, seni rupa & dekoratif
+701 Filsafat seni rupa & dekoratif
+702 Miscellany seni rupa & dekoratif
+703 Kamus seni rupa & dekoratif
+704 Topik-topik khusus dalam seni rupa & dekoratif
+705 Serial publikasi seni rupa & dekoratif
+706 Organisasi & manajemen
+Pendidikan 707, penelitian & topik terkait
+708 Galeri, museum & koleksi pribadi
+709 Sejarah, geografis & orang pengobatan
+710 Civic & landscape art
+711 area perencanaan
+712 Landscape architecture
+713 Landscape arsitektur trafficways
+714 Air fitur
+715 Woody tanaman
+716 Tanaman herba
+717 Struktur dalam arsitektur lansekap
+718 Landscape desain pemakaman
+719 Natural lanskap
+720 Arsitektur
+721 Arsitektur Struktur
+722 Arsitektur untuk ca. 300
+723 Arsitektur dari ca. 300-1399
+724 Arsitektur dari 1400
+725 Umum struktur
+726 Bangunan untuk tujuan religius
+727 Bangunan untuk pendidikan & penelitian
+728 Residential & bangunan terkait
+729 Desain & dekorasi
+730 Plastik seni; patung
+731 Proses, bentuk & pelajaran patung
+732 Patung untuk ca. 500
+733 Yunani patung, Etruscan & Romawi
+734 Patung dari ca. 500-1399
+735 Patung dari 1400
+736 Ukiran & ukiran
+737 Numismatik & sigillography
+738 Keramik seni
+739 Seni logam
+740 Menggambar & seni dekoratif
+741 Menggambar & gambar
+742 Perspektif
+743 Menggambar & gambar oleh subyek
+744 [Unassigned]
+745 Dekoratif seni
+746 Tekstil seni
+747 Interior dekorasi
+748 Kaca
+749 Furniture & aksesoris
+
+750 Lukisan & lukisan
+751 Teknik, peralatan, bahan & bentuk
+752 Warna
+753 Simbolisme, alegori, mitologi & legenda
+754 Genre lukisan
+755 Agama
+756 [Unassigned]
+757 Manusia angka
+758 lain subyek
+759 Sejarah, geografis & orang pengobatan
+760 Grafis seni, seni grafis & cetak
+761 Bantuan proses (Blok pencetakan)
+762 [Unassigned]
+763 litograf proses
+764 Chromolithography & serigraphy
+765 Logam ukiran
+766 Mezzotinting, aquatinting & proses terkait
+767 Etsa & drypoint
+768 [Unassigned]
+769 Cetakan
+770 Fotografi, foto & seni komputer
+771 Teknik, peralatan & bahan
+772 proses garam metalik
+773 Pigment proses pencetakan
+774 Holografi
+775 Digital fotografi
+776 Komputer art (Digital art)
+777 [Unassigned]
+778 Bidang & jenis fotografi
+779 Foto
+780 Musik
+781 Prinsip-prinsip umum & bentuk musik
+782 Vocal musik
+783 Musik untuk suara tunggal; suara
+784 Instrumen & ansambel instrumen
+785 Ensemble dengan satu instrumen per bagian
+786 Keyboard & instrumen lain
+787 Gesek instrumen
+788 Angin instrumen
+789 (nomor Opsional)
+790 Rekreasi & seni pertunjukan
+791 Umum pertunjukan
+792 Tahap presentasi
+793 Indoor games & hiburan
+794 Indoor permainan keterampilan
+795 Permainan kesempatan
+796 Athletic & outdoor olahraga & permainan
+797 Akuatik & udara olahraga
+798 Equestrian olahraga & balap hewan
+799 Fishing, hunting & shooting
+
+800
+
+800 Literatur & retorika
+801 Filsafat & Teori
+802 Miscellany
+803 Kamus & ensiklopedi
+804 [Unassigned]
+805 Serial publications
+806 Organizations & management
+807 Education, research & related topics
+808 Rhetoric & koleksi sastra
+809 History, description & criticism
+810 American literature in English
+811 American poetry in English
+812 American drama in English
+813 American fiction in English
+814 American essays in English
+815 American speeches in English
+816 American letters in English
+817 American humor & satire in English
+818 American miscellaneous writings
+819 (Optional number)
+820 English & Old English literatures
+821 English poetry
+822 English drama
+823 Bahasa Inggris fiksi
+824 Bahasa Inggris esai
+825 Bahasa Inggris pidato
+826 Bahasa Inggris huruf
+827 English humor & satire
+828 aneka tulisan bahasa Inggris
+829 Old English (Anglo-Saxon)
+830 Literatures of Germanic languages
+831 German poetry
+832 German drama
+833 German fiction
+834 German esai
+835 German pidato
+836 German huruf
+837 German humor & satire
+838 German miscellaneous writings
+839 Jermanik literatur lain
+840 Literatures of Romance languages
+841 French poetry
+842 French drama
+843 French fiksi
+844 French essays
+845 French pidato
+846 French letters
+847 French humor & satire
+848 aneka tulisan Perancis
+849 Occitan & Catalan literatures
+
+850 Italia, Rumania & terkait literatur
+851 Italian poetry
+852 Italia drama
+853 Italia fiksi
+854 Italia esai
+855 Italian speeches
+856 Italia huruf
+857 Italian humor & satire
+858 aneka tulisan Italia
+859 Romanian & related literatures
+860 Spanyol & Portugis literatur
+861 Spanish poetry
+862 Spanyol drama
+863 Spanyol fiksi
+864 Spanyol esai
+865 Spanyol pidato
+866 huruf Spanyol
+867 Spanish humor & satire
+868 aneka tulisan Spanyol
+869 Portuguese literature
+870 Italic literatures; Latin literature
+871 Latin poetry
+872 puisi dramatis Latin & drama
+873 puisi epik Latin & fiksi
+874 Latin puisi liris
+875 Latin pidato
+876 huruf Latin
+877 Latin humor & satire
+878 aneka tulisan Latin
+879 Literatures bahasa Italic lainnya
+880 Hellenic literatures; classical Greek
+881 Classical Greek poetry
+882 Classical Greek dramatic poetry & drama
+883 puisi epik klasik Yunani & fiksi
+884 puisi liris Yunani Klasik
+885 Yunani Klasik pidato
+886 huruf Yunani Klasik
+887 Classical Greek humor & satire
+888 Classical Greek miscellaneous writings
+889 Modern Greek literature
+890 Literatures of other languages
+891 East Indo-European & Celtic literatures
+892 Afro-Asiatic literatures; Semitic literatures
+893 Non-Semitic Afro-Asiatic literatures
+894 Altaic, Uralic, Hyperborean & Dravidian
+895 Literatures Timur & Asia Tenggara
+896 Afrika literatur
+897 Amerika Utara asli literatur
+898 South asli literatur Amerika
+899 Austronesian & other literatures
+
+900
+
+900 Sejarah & geografi
+901 Filsafat & Teori
+902 Miscellany
+903 Kamus & ensiklopedi
+904 Dikumpulkan rekening peristiwa
+905 Serial publikasi
+906 Organisasi & manajemen
+907 Education, research & related topics
+908 Kinds of persons treatment
+909 World history
+910 Geografi & travel
+911 Historical geography
+912 Atlases, maps, charts & plans
+913 Geography of & travel in ancient world
+914 Geography of & travel in Europe
+915 Geography of & travel in Asia
+916 Geography of & travel in Africa
+917 Geography of & travel in North America
+918 Geography of & travel in South America
+919 Geography of & travel in other areas
+920 Biography, genealogy & insignia
+921 (Optional number)
+922 (Optional number)
+923 (Optional number)
+924 (Optional number)
+925 (Optional number)
+926 (Optional number)
+927 (Optional number)
+928 (Optional number)
+929 Genealogy, names & insignia
+930 History of ancient world to ca. 499
+931 China to 420
+932 Egypt to 640
+933 Palestine to 70
+934 India to 647
+935 Mesopotamia & Iranian Plateau to 637
+936 Europe north & west of Italy to ca. 499
+937 Italy & adjacent territories to 476
+938 Greece to 323
+939 Other parts of ancient world to ca. 640
+940 Sejarah Eropa
+941 British Isles
+942 England & Wales
+943 Central Europe; Germany
+944 France & Monaco
+945 Italian Peninsula & adjacent islands
+946 Iberian Peninsula & adjacent islands
+947 Eastern Europe; Russia
+948 Scandinavia
+949 Other parts of Europe
+
+950 History of Asia; Far East
+951 China & adjacent areas
+952 Japan
+953 Arabian Peninsula & adjacent areas
+954 South Asia; India
+955 Iran
+956 Middle East (Near East)
+957 Siberia (Asiatic Russia)
+958 Central Asia
+959 Southeast Asia
+960 Sejarah Afrika
+961 Tunisia & Libya
+962 Egypt & Sudan
+963 Ethiopia & Eritrea
+964 Northwest African coast & offshore islands
+965 Algeria
+966 West Africa & offshore islands
+967 Central Africa & offshore islands
+968 Southern Africa; Republic of South Africa
+969 South Indian Ocean islands
+970 Sejarah Amerika Utara
+971 Canada
+972 Middle America; Mexico
+973 United States
+974 Northeastern United States
+975 Southeastern United States
+976 South central United States
+977 North central United States
+978 Western United States
+979 Great Basin & Pacific Slope region
+980 Sejarah Amerika Selatan
+981 Brazil
+982 Argentina
+983 Chile
+984 Bolivia
+985 Peru
+986 Colombia & Ecuador
+987 Venezuela
+988 Guiana
+989 Paraguay & Uruguay
+990 Sejarah daerah lain
+991 [Unassigned]
+992 [Unassigned]
+993 New Zealand
+994 Australia
+995 Melanesia; New Guinea
+996 Other parts of Pacific; Polynesia
+997 Atlantic Ocean islands
+998 Arctic islands & Antarctica
+999 Extraterrestrial worlds
+  }
+
+
+}
+

@@ -1,26 +1,32 @@
-<?php
-?>
-<script>
-  $(function () {
-      $("#search").keyup(function () {
-          var search = $("#search").val();
-          $.ajax({
-              type: "POST",
-              url: "?url=search",
-              data: {"search":search},
-              cache: false,
-              success: function (response) {
-                  $("#resSearch").html(response)
-              }
-          });
-          return false;
-      })
-  });
-</script>
+    <script>
+        $(function () {
+            $("#search").keyup(function () {
+                var search = $("#search").val();
+                $.ajax({
+                    type: "GET",
+//                    url: "?url=search",
+                    url: "?url=search&mod=api",
+//                    url: "src/api.php",
+                    data: {"q":search},
+                    cache: false,
+                    success: function (response) {
+                        $("html").removeClass();
+                        $("#resSearch").html(response);
+                        $('#resSearch').find("#navbar").hide();
 
-<form class="form-wrapper" action="?url=search">
-    <input type="text" id="search" name="search" placeholder="">
-    <button>Cari</button>
-</form>
+                    }
+                });
+                return false;
+            })
+        });
+    </script>
 
-<div id="resSearch" style="text-align: center; width: 685px; margin: 0 auto;"></div>
+<form class="form-wrapper" action="?url=search" method="get">
+        <input type="text" id="search" name="q" placeholder="">
+        <button>Cari</button>
+    </form>
+
+
+<!--<div id="resSearch" style="text-align: center; width: 685px; margin: 0 auto;"></div>-->
+<div id="resSearch" style="text-align: center; width: 800px%; margin: 0 auto;"></div>
+

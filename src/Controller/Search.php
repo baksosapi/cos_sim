@@ -18,9 +18,10 @@ class Search extends BaseController
     {
         parent::__construct();
         $this->loadModel('search');
+
     }
 
-    public function index(){
+    public function index_old(){
         $search_data = $this->model->wordsProcessor();
 //        echo '<pre>';print_r(sizeof($search_data[0]));
 //        echo '<pre>';print_r($search_data);
@@ -43,10 +44,10 @@ class Search extends BaseController
 //        $d[3] = "Delivery and Shipment of gold arrived from a truck";
 
         $d[0] = "Algoritma dan Teknik Pemrograman";
-        $d[0] = "konsep dan aplikasi sistem pendukung keputusan";
-        $d[1] = "sistem neuro fuzzy canggih";
-        $d[2] = "pengantar struktur data dan algoritma";
-        $d[3] = "pengantar logika informatika algoritma";
+        $d[1] = "konsep dan aplikasi sistem pendukung keputusan";
+        $d[2] = "sistem neuro fuzzy canggih";
+        $d[3] = "pengantar struktur data dan algoritma";
+        $d[4] = "pengantar logika informatika algoritma";
 //        echo '<pre>';print_r($d);
 //        echo '<pre>';print_r($qr);
 
@@ -62,10 +63,33 @@ class Search extends BaseController
 //        Show The result
         $tableShow = new ShowDisplay($cs);
 
-//        $tableShow->TableShow();
+//        echo '<pre>'; print_r($tableShow);
+
+//        $ts = $tableShow->TableShow();
 
 //# SHOW RESULT As List
-        $tableShow->TableShowResult();
+//        $tsr = $tableShow->TableShowResult();
+
+        $this->view->a = "aaaaaaaa";
+
+        $this->view->cs = $cs;
+
+        $this->view->render('search/get');
     }
 
+    public function index($mod){
+
+        $a = $this->model->getBooksBlurb();
+        $this->view->cs = 'a';
+
+        foreach ($a as $k => $v){
+            foreach ($v as $key => $val){
+                $res[$k] = $v['judul_buku'];
+            }
+        }
+
+        $this->view->result = $a;
+
+        (!($mod === 'api')) ? $this->view->render('search/get'): null ;
+    }
 }

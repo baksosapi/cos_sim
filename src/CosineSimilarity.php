@@ -5,25 +5,27 @@
  * User: wildan
  * Date: 10/1/16
  * Time: 10:20 PM
+ * @property array str
+ * @property array words
  */
 class CosineSimilarity {
 
-    private $str;
-    public $words;
-    public $num_d;
+//    private $str;
+//    public $words;
+//    public $num_d;
 
-    protected $au;
+//    protected $au;
 
-    public $TF_each;
-    public $TF_count;
-    public $DF;
-    public $DDFi;
-    public $idf;
-    public $w_tfidf;
-    public $DotProd;
-    public $VectorLength;
-    public $length_vector;
-    public $cos_sim;
+//    public $TF_each;
+//    public $TF_count;
+//    public $DF;
+//    public $DDFi;
+//    public $idf;
+//    public $w_tfidf;
+//    public $DotProd;
+//    public $VectorLength;
+//    public $length_vector;
+//    public $cos_sim;
 
 //    protected $show_result;
 
@@ -52,8 +54,6 @@ class CosineSimilarity {
             $this->words[] = preg_split('/((^\p{P}+)|(\p{P}*\s+\p{P}*)|(\p{P}+$)|(\p{P}))/', $arr, -1, PREG_SPLIT_NO_EMPTY);
         }
 
-
-
         $all_word = call_user_func('array_merge',$this->words);
 
         $flat = iterator_to_array(new RecursiveIteratorIterator(new RecursiveArrayIterator($all_word)), 0);
@@ -63,11 +63,9 @@ class CosineSimilarity {
 
         $this->au = $au;
 
-//        $this->preview($au);
-
-//        echo '<pre>';print_r($au);
 
 // ==================================================== START HERE ==================================================
+
         // Script start
         $rustart = getrusage();
 
@@ -75,36 +73,39 @@ class CosineSimilarity {
 
         $countTF = $this->countTF($au,$this->words);
 
-//        echo '<pre>';print_r($countTF);
 
-//        $countDF = $this->countDF($this->TF_count);
         $countDF = $this->countDF($this->TF_count);
-//
+
         $countDDFi = $this->countDDFi($countDF);
-//
+
         $countIDF = $this->countIDF($countDDFi);
-//
+
         $countW_TFIDF = $this->countW_TFIDF($countTF, $countIDF);
-//
+
         $countDP = $this->countDotProd();
+
         $countVL = $this->countVectorLength();
+
         $count_CS = $this->countCoSim();
 
         $this->showResult();
 
+        // Script end
+
 // ==================================================== END MAIN JOB , HERE ==================================================
 
-        // Script end
         function rutime($ru, $rus, $index) {
             return ($ru["ru_$index.tv_sec"]*1000 + intval($ru["ru_$index.tv_usec"]/1000))
             -  ($rus["ru_$index.tv_sec"]*1000 + intval($rus["ru_$index.tv_usec"]/1000));
         }
 
         $ru = getrusage();
+
+
         echo "Proses memerlukan waktu selama " . rutime($ru, $rustart, "utime") .
-            " ms untuk komputasi keseluruhan\n";
-        echo "Proses ini memerlukan waktu " . rutime($ru, $rustart, "stime") .
-            " ms dalam Sistem Call \n";
+            " ms untuk komputasi keseluruhan <br>";
+        echo "Proses pemanggilan " . rutime($ru, $rustart, "stime") .
+            " ms dalam Sistem Call <br>";
 
     }
 
@@ -361,6 +362,8 @@ class CosineSimilarity {
 
         }
 
+//        $this->preview($this->cos_sim);
+
         return null;
 
     }
@@ -369,6 +372,8 @@ class CosineSimilarity {
      * @return null
      */
     public function showResult(){
+
+//        $this->preview(sizeof($this->cos_sim));
 
         foreach ($this->cos_sim as $k => $v){
             $resultShow[$k] = [$v,$this->str[$k]];

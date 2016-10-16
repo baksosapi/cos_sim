@@ -8,6 +8,8 @@
  */
 namespace Controller;
 
+use Model\BaseModel;
+
 abstract class BaseController
 {
 

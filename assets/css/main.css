@@ -399,8 +399,8 @@ a {
 /* Form text input */
  
 .form-wrapper input {
-    width: 540px;
-    height: 40px;
+    width: 530px;
+    height: 20px;
     padding: 10px 5px;
     float: left;    
     font: bold 15px "Open Sans";

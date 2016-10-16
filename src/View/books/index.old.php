@@ -64,7 +64,7 @@
 <![endif]-->
 
 
-<form class="form-wrapper cf" action="../../../search.php" method="post" name="form" onsubmit="return false;">
+<form class="form-wrapper cf" action="../../../search.php.old" method="post" name="form" onsubmit="return false;">
     <input type="text" name="search" id="search" placeholder="">
     <button type="submit">Search</button>
 </form>

@@ -19,12 +19,20 @@ class SearchModel extends BaseModel
 
     }
 
+
+    public function getBooksBlurb(){
+        $a = $this->db->query("SELECT * FROM buku;")->fetchAll(\PDO::FETCH_ASSOC);
+
+        return $a;
+    }
+
     public function wordsProcessor()
     {
         header("Content-type: text/html; charset=utf-8");
-        if (!empty($_POST['search'])) {
 
-            $search = $_POST['search'];
+        if (!empty($_GET['q'])) {
+
+            $search = $_GET['q'];
             $search = addslashes($search);
             $search = htmlspecialchars($search);
             $search = stripslashes($search);
@@ -45,7 +53,7 @@ class SearchModel extends BaseModel
 
         $res = [$a, $b];
 
-        return $res;
+        return $this->res = $res;
 
     }
 

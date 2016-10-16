@@ -64,12 +64,13 @@ class ShowDisplay{
     public function TableShow(){
 
         function print_row(&$item, $key) {
-            echo('<tr>'.'<td>'.$key.'</td><td>'.implode('</td><td>', $item).'</td>'.'</tr>');
+            echo('<tr>'.'<td bgcolor="#FFEBEE">'.$key.'</td><td bgcolor="#FCE4EC">'.implode('</td><td>', $item).'</td>'.'</tr>');
         }
 
         ?>
 
-        <table border="0" width="90%" align="center">
+        <br>
+        <table border="0" width="100%" align="center" class="display" id="table1" style="display: none">
         <tr>
             <th rowspan="2" bgcolor="<?=$this->hue50[0];?>">Word</th>
             <th colspan="<?php echo $this->data_table->num_d + 1; ?>" bgcolor="<?=$this->hue50[3];?>">Term Frequency</th>
@@ -82,12 +83,13 @@ class ShowDisplay{
         </tr>
         <tr>
             <th bgcolor="<?=$this->hue50[0];?>">q</th>
-            <?php for ($i = 0; $i < $this->data_table->num_d; $i++) {
-                $a = 1;
+            <?php $a = 1; for ($i = 0; $i < $this->data_table->num_d; $i++) {
+
                 echo '<th bgcolor="' . $this->hue50[$a++].'">d' . $i . '</th>';
             } ?>
             <th bgcolor="#ffebcd">q</th>
-            <?php for ($i = 0; $i < $this->data_table->num_d; $i++) {
+            <?php $a = 1;
+            for ($i = 0; $i < $this->data_table->num_d; $i++) {
                 echo '<th bgcolor="'. $this->hue50[$a].'">d' . $i . '</th>';
             } ?>
             <?php for ($i = 0; $i < $this->data_table->num_d; $i++) {
@@ -110,6 +112,22 @@ class ShowDisplay{
      */
     public function TableShowResult(){
 ?>
+        <script>
+            x = false;
+
+            function Check() {
+                if (x) {
+                    document.getElementById("table1").style.display = 'none';
+                    x = false;
+                } else {
+                    document.getElementById("table1").style.display = 'inline';
+                    x = true;
+                }
+
+            }
+
+        </script>
+
         <style>
             .error-notice {
                 margin: 5px 5px; /* Make sure to keep some distance from all side */
@@ -170,12 +188,12 @@ class ShowDisplay{
 //            echo('<ul class="ul">'.'<li>'.$key.'</li><li>'.implode('%</li><li>', $item).'</li>'.'</ul>');
 
             echo (
-                '<div class="row">'.
+                '<div class="row" style="width: 685px; text-align: center; margin: 0 auto;">'.
                 '<div class="col-md-100 col-md-offset-0">'.
-                '<br><br>'.
+//                '<br><br>'.
                 '<div class="error-notice">'.
                 '<div class="oaerror danger">'.
-                '<strong>Title</strong> - '. $item[1].
+                '<strong>Judul</strong> - '. $item[1].
                 '</div>'.
                 '<div class="oaerror warning">'.
                 '<strong>Url</strong> - <a href="<?= $row[\'url\'] ?>"><?= $row[\'url\'] ?></a>'.
@@ -193,8 +211,16 @@ class ShowDisplay{
 
         }
         ?>
-        <table border="1">
+<!--        <table border="1">-->
             <?php
+//            echo "<br>";
+            echo (
+                '<pre>'.
+                '<div class="" style="width: 200px; text-align: center; margin: 0 auto;">'.
+                '<a href="#" onclick="Check()">Tabel Perhitungan</a>'.
+                '</div>'.
+                '</pre>'
+            );
 
             $results_data = $this->data_table->getShowResult();
 
@@ -203,11 +229,9 @@ class ShowDisplay{
 
             array_walk($results_data, 'print_list');
             ?>
-        </table>
+<!--        </table>-->
 
 <!--        ALTERNATE -->
-
-
 
         <?php
     }
