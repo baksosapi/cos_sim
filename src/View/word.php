@@ -1,5 +1,5 @@
 <?php
-/**
+/*
  * Created by PhpStorm.
  * User: wildan
  * Date: 9/29/16

@@ -3,10 +3,9 @@
  * Created by PhpStorm.
  * User: wildan
  * Date: 9/29/16
- * Time: 7:52 PM
+ * Time: 7:52 PM.
  */
-
-$page_title = "Tambah Koleksi Buku ..."
+$page_title = 'Tambah Koleksi Buku ...'
 ?>
 
 <div id="book-form">
@@ -16,7 +15,7 @@ $page_title = "Tambah Koleksi Buku ..."
             <th>Tipe Buku</th>
 <!--            <th>Keterangan</th>-->
         </tr>
-        <?php foreach($this->type_data as $type): ?>
+        <?php foreach ($this->type_data as $type): ?>
             <tr>
                 <td><?= $type['code']?></td>
                 <td><?= $type['type_name']?></td>

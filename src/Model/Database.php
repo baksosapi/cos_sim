@@ -3,19 +3,17 @@
  * Created by PhpStorm.
  * User: wildan
  * Date: 9/29/16
- * Time: 3:55 PM
+ * Time: 3:55 PM.
  */
-
 namespace Model;
-
 
 use PDO;
 
 class Database extends PDO
 {
-
     /**
      * Database constructor.
+     *
      * @param string $DB_VENDOR
      * @param string $DB_HOST
      * @param string $DB_NAME

@@ -3,20 +3,19 @@
  * Created by PhpStorm.
  * User: wildan
  * Date: 9/29/16
- * Time: 7:52 PM
+ * Time: 7:52 PM.
  */
-
-$page_title = "Tambah Koleksi Buku ..."
+$page_title = 'Tambah Koleksi Buku ...'
 ?>
 
 <div id="book-form" class="clearfix">
     <h2>Tambah Data Buku</h2>
 <!--    <h1>Tambah Data Buku</h1>-->
 <!--    <h2>Lengkapi formulir isian berikut dengan benar </h2>-->
-    <ul id="errors" class="<?= ($sr && !$cf['ok']) ? 'visible':'';?>">
+    <ul id="errors" class="<?= ($sr && !$cf['ok']) ? 'visible' : ''; ?>">
         <li id="info">Terdapat kesalahan penambahan data:</li>
     </ul>
-    <p id="success" class="<?=(isset($this->id))?'visible':'';?>">Data Buku berhasil ditambahkan!</p>
+    <p id="success" class="<?=(isset($this->id)) ? 'visible' : ''; ?>">Data Buku berhasil ditambahkan!</p>
     <form method="post" action="?url=books/add">
         <label for="title">Judul: <span class="required">*</span></label>
         <input type="text" id="title" name="title" value="" placeholder="Pemrograman Java" required="required" autofocus="autofocus" />
@@ -32,7 +31,7 @@ $page_title = "Tambah Koleksi Buku ..."
 
         <label for="type">Jenis Buku: </label>
         <select id="type" name="type">
-        <?php foreach($this->type_data as $type): ?>
+        <?php foreach ($this->type_data as $type): ?>
                 <option value="<?= $type['code']?>"><?= $type['type_name'] ?></option>
         <?php endforeach; ?>
 

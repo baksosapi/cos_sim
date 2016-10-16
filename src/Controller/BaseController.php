@@ -4,15 +4,12 @@
  * Created by PhpStorm.
  * User: wildan
  * Date: 9/29/16
- * Time: 12:00 PM
+ * Time: 12:00 PM.
  */
 namespace Controller;
 
-use Model\BaseModel;
-
 abstract class BaseController
 {
-
     public function __construct()
     {
         $this->view = new BaseView();
@@ -21,24 +18,21 @@ abstract class BaseController
         Session::init();
     }
 
-    public function loadModel($name){
-
+    public function loadModel($name)
+    {
         $modelName = ucfirst($name);
         $path = 'src/Model/'.$modelName.'Model.php';
 
-        if (file_exists($path)){
+        if (file_exists($path)) {
 
 
 //            require_once($path);
 
-            $modelName = "\\Model\\".$modelName."Model";
+            $modelName = '\\Model\\'.$modelName.'Model';
 
             $this->model = new $modelName();
-
         } else {
-            echo "Model not found!";
+            echo 'Model not found!';
         }
-
-
     }
 }

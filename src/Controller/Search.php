@@ -3,11 +3,9 @@
  * Created by PhpStorm.
  * User: wildan
  * Date: 10/1/16
- * Time: 3:21 PM
+ * Time: 3:21 PM.
  */
-
 namespace Controller;
-
 
 use CosineSimilarity;
 use ShowDisplay;
@@ -18,10 +16,10 @@ class Search extends BaseController
     {
         parent::__construct();
         $this->loadModel('search');
-
     }
 
-    public function index_old(){
+    public function index_old()
+    {
         $search_data = $this->model->wordsProcessor();
 //        echo '<pre>';print_r(sizeof($search_data[0]));
 //        echo '<pre>';print_r($search_data);
@@ -43,11 +41,11 @@ class Search extends BaseController
 //        $d[2] = "Shipment of gold arrived in a truck";
 //        $d[3] = "Delivery and Shipment of gold arrived from a truck";
 
-        $d[0] = "Algoritma dan Teknik Pemrograman";
-        $d[1] = "konsep dan aplikasi sistem pendukung keputusan";
-        $d[2] = "sistem neuro fuzzy canggih";
-        $d[3] = "pengantar struktur data dan algoritma";
-        $d[4] = "pengantar logika informatika algoritma";
+        $d[0] = 'Algoritma dan Teknik Pemrograman';
+        $d[1] = 'konsep dan aplikasi sistem pendukung keputusan';
+        $d[2] = 'sistem neuro fuzzy canggih';
+        $d[3] = 'pengantar struktur data dan algoritma';
+        $d[4] = 'pengantar logika informatika algoritma';
 //        echo '<pre>';print_r($d);
 //        echo '<pre>';print_r($qr);
 
@@ -70,26 +68,26 @@ class Search extends BaseController
 //# SHOW RESULT As List
 //        $tsr = $tableShow->TableShowResult();
 
-        $this->view->a = "aaaaaaaa";
+        $this->view->a = 'aaaaaaaa';
 
         $this->view->cs = $cs;
 
         $this->view->render('search/get');
     }
 
-    public function index($mod){
-
+    public function index($mod)
+    {
         $a = $this->model->getBooksBlurb();
         $this->view->cs = 'a';
 
-        foreach ($a as $k => $v){
-            foreach ($v as $key => $val){
+        foreach ($a as $k => $v) {
+            foreach ($v as $key => $val) {
                 $res[$k] = $v['judul_buku'];
             }
         }
 
         $this->view->result = $a;
 
-        (!($mod === 'api')) ? $this->view->render('search/get'): null ;
+        (!($mod === 'api')) ? $this->view->render('search/get') : null;
     }
 }
