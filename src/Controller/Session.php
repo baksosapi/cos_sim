@@ -4,13 +4,12 @@
  * Created by PhpStorm.
  * User: wildan
  * Date: 9/29/16
- * Time: 12:04 PM
+ * Time: 12:04 PM.
  */
 namespace Controller;
 
 class Session
 {
-
     public static function init()
     {
         @session_start();
@@ -23,10 +22,9 @@ class Session
 
     public static function get($key)
     {
-        if(isset($_SESSION[$key])){
+        if (isset($_SESSION[$key])) {
             return $_SESSION[$key];
-        }
-        else{
+        } else {
             return false;
         }
     }
@@ -35,6 +33,4 @@ class Session
     {
         session_destroy();
     }
-
 }
-

@@ -3,9 +3,8 @@
  * Created by PhpStorm.
  * User: wildan
  * Date: 9/29/16
- * Time: 3:53 PM
+ * Time: 3:53 PM.
  */
-
 namespace Model;
 
 abstract class BaseModel

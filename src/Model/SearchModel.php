@@ -3,11 +3,9 @@
  * Created by PhpStorm.
  * User: wildan
  * Date: 10/1/16
- * Time: 3:20 PM
+ * Time: 3:20 PM.
  */
-
 namespace Model;
-
 
 class SearchModel extends BaseModel
 {
@@ -16,36 +14,33 @@ class SearchModel extends BaseModel
         parent::__construct();
 
 //        $this->wordsProcessor();
-
     }
 
-
-    public function getBooksBlurb(){
-        $a = $this->db->query("SELECT * FROM buku;")->fetchAll(\PDO::FETCH_ASSOC);
+    public function getBooksBlurb()
+    {
+        $a = $this->db->query('SELECT * FROM buku;')->fetchAll(\PDO::FETCH_ASSOC);
 
         return $a;
     }
 
     public function wordsProcessor()
     {
-        header("Content-type: text/html; charset=utf-8");
+        header('Content-type: text/html; charset=utf-8');
 
         if (!empty($_GET['q'])) {
-
             $search = $_GET['q'];
             $search = addslashes($search);
             $search = htmlspecialchars($search);
             $search = stripslashes($search);
             $word_qr = $search;
-            $words  = preg_split("/[[:space:],]+/", $search);  // Parse into Words
-
+            $words = preg_split('/[[:space:],]+/', $search);  // Parse into Words
         } else {
-            die("<h3>Masukkan kata kunci yang dicari...</h3>");
+            die('<h3>Masukkan kata kunci yang dicari...</h3>');
         }
 
 //        $a = $this->db->query("SELECT * FROM book")->fetchAll(\PDO::FETCH_ASSOC);
 
-        $a = $this->db->query("SELECT * FROM buku;")->fetchAll(\PDO::FETCH_ASSOC);
+        $a = $this->db->query('SELECT * FROM buku;')->fetchAll(\PDO::FETCH_ASSOC);
 
 //        $a =  $this->db->query("SELECT * FROM bukuku;")->fetchAll(\PDO::FETCH_ASSOC);
 
@@ -54,7 +49,5 @@ class SearchModel extends BaseModel
         $res = [$a, $b];
 
         return $this->res = $res;
-
     }
-
 }

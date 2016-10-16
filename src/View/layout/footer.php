@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: wildan
  * Date: 9/29/16
- * Time: 7:44 PM
+ * Time: 7:44 PM.
  */
 ?>
 <script src="assets/js/plugins.js"></script>

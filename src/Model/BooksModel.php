@@ -3,14 +3,13 @@
  * Created by PhpStorm.
  * User: wildan
  * Date: 9/29/16
- * Time: 10:59 AM
+ * Time: 10:59 AM.
  */
-
 namespace Model;
 
 class BooksModel extends BaseModel
 {
-//    protected $book_title;
+    //    protected $book_title;
 //    private $book_author;
 //    protected $book_subtitle;
 //    protected $book_publisher;
@@ -25,12 +24,13 @@ class BooksModel extends BaseModel
         parent::__construct();
     }
 
-    public function addNewBooks($book){
+    public function addNewBooks($book)
+    {
         ksort($book);
 //        print_r($books);
         $columns = implode(',', array_keys($book));
 //        print_r($columns);
-        $values = ":" . implode(', :', array_keys($book));
+        $values = ':'.implode(', :', array_keys($book));
 //        print_r($values);
 
         $st = $this->db->prepare("INSERT INTO book($columns) VALUES($values);");
@@ -45,7 +45,7 @@ class BooksModel extends BaseModel
 //        $st_word = $this->db->prepare("INSERT INTO word($col) VALUES($val);");
 
 
-        foreach ($book as $k => $v){
+        foreach ($book as $k => $v) {
             $st->bindValue(":$k", $v);
         }
 
@@ -54,8 +54,8 @@ class BooksModel extends BaseModel
         return $this->db->lastInsertId();
     }
 
-    public function getBooks(){
-        return $this->db->query("SELECT * FROM book")->fetchAll(\PDO::FETCH_ASSOC);
+    public function getBooks()
+    {
+        return $this->db->query('SELECT * FROM book')->fetchAll(\PDO::FETCH_ASSOC);
     }
-
 }

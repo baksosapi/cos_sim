@@ -3,10 +3,9 @@
  * Created by PhpStorm.
  * User: wildan
  * Date: 9/29/16
- * Time: 7:52 PM
+ * Time: 7:52 PM.
  */
-
-$page_title = "Tambah Koleksi Buku ..."
+$page_title = 'Tambah Koleksi Buku ...'
 ?>
 
 <div id="book-form" class="clearfix">
