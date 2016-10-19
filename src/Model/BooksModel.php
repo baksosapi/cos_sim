@@ -56,6 +56,6 @@ class BooksModel extends BaseModel
 
     public function getBooks()
     {
-        return $this->db->query('SELECT * FROM book')->fetchAll(\PDO::FETCH_ASSOC);
+        return $this->db->query('SELECT * FROM buku')->fetchAll(\PDO::FETCH_ASSOC);
     }
 }

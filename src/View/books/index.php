@@ -5,8 +5,9 @@
                 $.ajax({
                     type: "GET",
 //                    url: "?url=search",
-                    url: "?url=search&mod=api",
-//                    url: "src/api.php",
+//                    url: "?url=search&mod=api",
+                    url: "src/api.php",
+//                    url: "?",
                     data: {"q":search},
                     cache: false,
                     success: function (response) {

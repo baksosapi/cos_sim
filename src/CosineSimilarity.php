@@ -31,23 +31,45 @@ class CosineSimilarity
 //    protected $show_result;
 
 //    public function __construct($d,$q){
+
     public function __construct($q, $d)
     {
-        $data = func_get_args();
+        $data_all = func_get_args();
 
+        $data = array_merge_recursive($q,$d);
+
+//        print_r($data_all);
+
+        $this->num_q = count($q);
         $this->num_d = count($d);
+        $this->num_data = count($data);
+
+//        echo '<pre>';
+//        print_r($this->num_q);
+//        echo '<pre>';
+//        print_r($this->num_d);
+//        echo '<pre>';
+//        print_r($this->num_data);
 
 //        print_r(sizeof($data));
+//        print_r($data);
 
+//        Tokenization
         if (isset($data)) {
-            foreach ($data as $dt => $a) {
-                //                echo '<pre>';print_r($data);
-                foreach ($a as $b => $c) {
-                    $this->str[] = strtolower($c);
-                }
+            foreach ($data as $key => $val) {
+                    $this->str[] = strtolower($val);
             }
         }
-
+//  q[] data[]
+//        if (isset($data)) {
+//            foreach ($data as $dt => $a) {
+////                echo '<pre>';print_r($data);
+//                foreach ($a as $b => $c) {
+//                    $this->str[] = strtolower($c);
+//                }
+//            }
+//        }
+//
 //        echo '<pre>';print_r($this->str);
 
         foreach (array_filter($this->str) as $arr) {
@@ -373,6 +395,7 @@ class CosineSimilarity
             arsort($rank, SORT_NUMERIC);
 
             $this->cos_sim = $rank;
+
         }
 
 //        $this->preview($this->cos_sim);
@@ -384,19 +407,15 @@ class CosineSimilarity
     public function showResult()
     {
 
-//        $this->preview(sizeof($this->cos_sim));
+        array_shift($this->str);
 
-        foreach ($this->cos_sim as $k => $v) {
-            $resultShow[$k] = [$v, $this->str[$k]];
+        if (isset($this->cos_sim)) {
+            foreach ($this->cos_sim as $k => $v) {
+                $resultShow[$k] = [$v, $this->str[$k]];
+            }
         }
 
         if (!empty($resultShow)) {
-
-            // Remove Element query
-//            array_shift($resultShow);
-
-//            $this->preview($resultShow);
-//            $this->preview(sizeof($resultShow));
 
             $this->show_result = $resultShow;
         }
@@ -420,7 +439,9 @@ class CosineSimilarity
             $strtemp[] = $i;
         }
 
-        return $strtemp;
+        if (isset($strtemp)) {
+            return $strtemp;
+        }
     }
 
     /**
