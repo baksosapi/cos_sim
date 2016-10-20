@@ -12,6 +12,7 @@ class SearchModel extends BaseModel
     public function __construct()
     {
         parent::__construct();
+        $this->book = new \Model\BooksModel();
 
 //        $this->wordsProcessor();
     }
@@ -32,8 +33,9 @@ class SearchModel extends BaseModel
             $search = addslashes($search);
             $search = htmlspecialchars($search);
             $search = stripslashes($search);
-            $word_qr = $search;
+            $word_qr[] = $search;
             $words = preg_split('/[[:space:],]+/', $search);  // Parse into Words
+
         } else {
             die('<h3>Masukkan kata kunci yang dicari...</h3>');
         }
@@ -49,5 +51,22 @@ class SearchModel extends BaseModel
         $res = [$a, $b];
 
         return $this->res = $res;
+    }
+
+    public function word_processor(){
+        $all_book = $this->book->getBooks();
+
+        foreach ($all_book as $key => $val){
+            foreach ($val as $k => $v){
+                $book_words[$key]['id'] = $val['id_buku'];
+                $book_words[$key]['words'] = trim($val['judul_buku'])." ".trim($val['keterangan']);
+
+                $data_words[$key] = $book_words[$key]['words'];
+            }
+        }
+
+        if (!empty($data_words)) {
+            return $data_words;
+        }
     }
 }

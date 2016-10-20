@@ -38,6 +38,8 @@
             <span class="menu-link"><a href="./">Home</a> </span>
             <span class="menu-link"><a href="./?url=books/add">Book</a> </span>
             <span class="menu-link"><a href="./?url=books_type/add">Type</a> </span>
+            <span class="menu-link"><a href="./?url=traine">Traine</a> </span>
+            <span class="menu-link"><a href="./?url=exam">Uji</a> </span>
         </div>
     </div>
 </div>

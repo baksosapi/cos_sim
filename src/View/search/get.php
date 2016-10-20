@@ -8,8 +8,10 @@
 
 //echo $this->cs;
 
-if (!empty($result)) {
-    print_r($result);
+if (!empty($this->res)) {
+    echo '<pre>';
+    print_r($this->res);
 }
+//print_r($_GET['q']);
 
-print_r($_GET['q']);
+

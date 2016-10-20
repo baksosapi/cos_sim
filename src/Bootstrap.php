@@ -4,8 +4,11 @@ class Bootstrap
 {
     public function __construct()
     {
-        print_r(base_u);
-        (new \Controller\Books())->index();
+        if(isset($_GET['q'])){
+            (new \Controller\Search())->index();
+        } else {
+            (new \Controller\Books())->index();
+        }
     }
 
     public function controllerExist(){

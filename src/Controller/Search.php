@@ -75,19 +75,31 @@ class Search extends BaseController
         $this->view->render('search/get');
     }
 
-    public function index($mod)
+    public function index()
     {
-        $a = $this->model->getBooksBlurb();
-        $this->view->cs = 'a';
+
+        $a = $this->model->wordsProcessor();
+
+        print_r($a[1]);
+//        $cs = new CosineSimilarity($a[1], $a[0]);
+
+        $cs = new CosineSimilarity($word_qr, $a->word_processor() );
+
+
+//        $a = $this->model->getBooksBlurb();
 
         foreach ($a as $k => $v) {
-            foreach ($v as $key => $val) {
-                $res[$k] = $v['judul_buku'];
-            }
+//            foreach ($v as $key => $val) {
+//                $res[$k] = $v['judul_buku'];
+                $res[$k] = $v;
+
+//            }
         }
 
-        $this->view->result = $a;
+//        $this->view->res = $this->model->getBooksBlurb();
+        $this->view->res = $cs->getShowResult();
 
-        (!($mod === 'api')) ? $this->view->render('search/get') : null;
+//        (!($mod === 'api')) ? $this->view->render('search/get') : null;
+        $this->view->render('search/get');
     }
 }

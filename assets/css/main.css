@@ -345,18 +345,17 @@ h3 {
 
 .menu-link {
     color: #ccc;
-    font: 300 14px "Open Sans";
+    font: 600 14px "Open Sans";
     line-height: 46px;
     white-space: nowrap;
 }
 
 .menu-link a{
     color: #ccc;
-    font: 300 14px "Open Sans";
+    font: 600 14px "Open Sans";
     line-height: 46px;
     white-space: nowrap;
     text-decoration: none;
-
 }
 .menu-link a:hover{
     color: #FFF;
