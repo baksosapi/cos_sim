@@ -2,3 +2,4 @@
 .idea/
 .old.php
 src/Bootstraped.php
+src/View/word.php

@@ -130,9 +130,10 @@ class ShowDisplay
         <style>
             .error-notice {
                 margin: 5px 5px; /* Make sure to keep some distance from all side */
+                text-align: left;
             }
 
-            .oaerror {
+            .error {
                 width: 90%; /* Configure it fit in your design  */
                 margin: 0 auto; /* Centering Stuff */
                 background-color: #FFFFFF; /* Default background */
@@ -192,16 +193,15 @@ class ShowDisplay
             echo
                 '<div class="row" style="width: 685px; text-align: center; margin: 0 auto;">'.
                 '<div class="col-md-100 col-md-offset-0">'.
-//                '<br><br>'.
                 '<div class="error-notice">'.
-                '<div class="oaerror danger">'.
+                '<div class="error danger">'.
                 '<strong>Judul</strong> - '.$item[1].
                 '</div>'.
                 '<div class="oaerror warning">'.
                 '<strong>Url</strong> - <a href="<?= $row[\'url\'] ?>"><?= $row[\'url\'] ?></a>'.
                 '</div>'.
                 '<div class="oaerror info">'.
-                '<strong>Page Rank</strong> - <?= $row[\'pr\'] ?>'.
+                '<strong>Page Rank</strong> - <?=$row[\'pr\'] ?>'.
                 '</div>'.
                 '<div class="oaerror success">'.
                 '<strong>TF-IDF: '.$item[0].' &amp; HITS</strong> - <?= "0" ?>'.
@@ -214,11 +214,9 @@ class ShowDisplay
             <?php
 //            echo "<br>";
             echo
-                '<pre>'.
                 '<div class="" style="width: 200px; text-align: center; margin: 0 auto;">'.
                 '<a href="#" onclick="Check()">Tabel Perhitungan</a>'.
-                '</div>'.
-                '</pre>';
+                '</div>';
 
         $results_data = $this->data_table->getShowResult();
 

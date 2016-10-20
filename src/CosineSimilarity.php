@@ -124,7 +124,6 @@ class CosineSimilarity
 
         $ru = getrusage();
 
-
         echo 'Proses memerlukan waktu selama '.rutime($ru, $rustart, 'utime').
             ' ms untuk komputasi keseluruhan <br>';
         echo 'Proses pemanggilan '.rutime($ru, $rustart, 'stime').

@@ -8,6 +8,7 @@
 namespace Controller;
 
 use CosineSimilarity;
+use Model\SearchModel;
 use ShowDisplay;
 
 class Search extends BaseController
@@ -78,13 +79,23 @@ class Search extends BaseController
     public function index()
     {
 
-        $a = $this->model->wordsProcessor();
+        $a = $this->model->word_processor();
 
-        print_r($a[1]);
-//        $cs = new CosineSimilarity($a[1], $a[0]);
 
-        $cs = new CosineSimilarity($word_qr, $a->word_processor() );
+        header('Content-type: text/html; charset=utf-8');
 
+        if (!empty($_GET['q'])) {
+            $search = $_GET['q'];
+            $search = addslashes($search);
+            $search = htmlspecialchars($search);
+            $search = stripslashes($search);
+            $word_qr[] = $search;
+            $words = preg_split('/[[:space:],]+/', $search);  // Parse into Words
+        } else {
+            die('<h3>Masukkan kata kunci yang dicari...</h3>');
+        }
+
+        $cs = new CosineSimilarity($word_qr, $a );
 
 //        $a = $this->model->getBooksBlurb();
 
@@ -98,8 +109,16 @@ class Search extends BaseController
 
 //        $this->view->res = $this->model->getBooksBlurb();
         $this->view->res = $cs->getShowResult();
+//        $this->view->res = $cs->showResult();
 
-//        (!($mod === 'api')) ? $this->view->render('search/get') : null;
+//      Show Result with Form as List
+        $tableShow = new ShowDisplay($cs);
+        $tableShow->TableShow();
         $this->view->render('search/get');
+
+//      SHOW RESULT
+        $tableShow->TableShowResult();
+//        $this->view->res_table = $tableShow;
+//        (!($mod === 'api')) ? $this->view->render('search/get') : null;
     }
 }
