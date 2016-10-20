@@ -7,7 +7,17 @@ class Bootstrap
         if(isset($_GET['q'])){
             (new \Controller\Search())->index();
         } else {
+
+            if(isset($_GET['url'])){
+                $url = explode('/', $_GET['url']);
+//                print_r($url);
+                $controller = '\\Controller\\'.ucfirst($url[0]);
+
+                (new $controller())->$url[1]();
+
+            } else {
             (new \Controller\Books())->index();
+          }
         }
     }
 
