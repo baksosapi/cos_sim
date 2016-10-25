@@ -12,13 +12,11 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <!-- Place favicon.ico in the root directory -->
 
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <!--<link href='//fonts.googleapis.com/css?family=Open+Sans:300&subset=cyrillic,latin' rel='stylesheet' type='text/css'>-->
     <link href='assets/css/font.css' rel='stylesheet' type='text/css'>
-    <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
-    <script src="assets/js/vendor/jquery-3.1.1.min.js"></script>
-    <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>-->
 
 
 </head>
@@ -38,6 +36,7 @@
             <span class="menu-link"><a href="./">Home</a> </span>
             <span class="menu-link"><a href="./?url=books/add">Book</a> </span>
             <span class="menu-link"><a href="./?url=books_type/add">Type</a> </span>
+            <span class="menu-link"><a href="./?url=stop_word/add">Stop Word</a> </span>
             <span class="menu-link"><a href="./?url=traine/add">Traine</a> </span>
             <span class="menu-link"><a href="./?url=exam/add">Uji</a> </span>
         </div>

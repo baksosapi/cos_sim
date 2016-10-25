@@ -106,11 +106,15 @@ class Matrix
 
         for ($i = 0; $i < $rows; $i++) {
             for ($j = 0; $j < $columns; $j++) {
+                echo'i';print_r($i);
+                echo 'j'; print_r($j);
                 $neoMatrix[$i][$j] = $matrix[$i][$j];
             }
         }
 
-        return $neoMatrix;
+        if (!empty($neoMatrix)) {
+            return $neoMatrix;
+        }
     }
 
     /**

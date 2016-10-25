@@ -68,6 +68,17 @@ class ShowDisplay
         } ?>
 
         <br>
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel">Tabel Perhitungan</h4>
+        </div>
+        <div class="modal-body">
+<!--        Content here -->
         <table border="0" width="100%" align="center" class="display" id="table1" style="display: none">
         <tr>
             <th rowspan="2" bgcolor="<?=$this->hue50[0]; ?>">Word</th>
@@ -100,7 +111,14 @@ class ShowDisplay
         </tr>
         <?php array_walk($this->data_show, 'print_row'); ?>
         </table>
-
+<!--            End Content -->
+        </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
+        </div>
         <?php
 
     }
@@ -215,7 +233,11 @@ class ShowDisplay
 //            echo "<br>";
             echo
                 '<div class="" style="width: 200px; text-align: center; margin: 0 auto;">'.
-                '<a href="#" onclick="Check()">Tabel Perhitungan</a>'.
+                '<a href="#" onclick="Check()">Tabel Perhitungan</a>';
+
+            echo '<button type="button" onclick="Check()" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">'.
+                'Perhitungan'.
+                '</button>'.
                 '</div>';
 
         $results_data = $this->data_table->getShowResult();

@@ -16,6 +16,8 @@ html {
     line-height: 1.4;
 }
 
+
+
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
@@ -268,7 +270,8 @@ body {
     padding: 0;
     height: 100%;
     color: #222;
-    font: 300 14px Roboto,Arial,Helvetica,sans-serif;
+    /*font: 300 14px Roboto,Arial,Helvetica,sans-serif;*/
+    font-family: 'Cabin', sans-serif;
     line-height: 1.4;
     /*overflow: hidden;*/
     position: relative;
@@ -282,7 +285,7 @@ h3 {
 #navbar {
     -webkit-box-shadow: 0 0 3px rgba(34, 34, 34, .6);
     box-shadow: 0 0 3px rgba(34, 34, 34, .6);
-    background-color: #333;
+    /*background-color: #333;*/
     color: #fff;
     height: 60px;
     position: relative;
@@ -345,21 +348,22 @@ h3 {
 
 .menu-link {
     color: #ccc;
-    font: 600 14px "Open Sans";
+    /*font: 600 14px "Open Sans";*/
     line-height: 46px;
     white-space: nowrap;
 }
 
 .menu-link a{
-    color: #ccc;
-    font: 600 14px "Open Sans";
+    color: #24437f;
+    font-size: 100%;
+    /*font: 14px "Open Sans";*/
     line-height: 46px;
     white-space: nowrap;
     text-decoration: none;
 }
 .menu-link a:hover{
-    color: #FFF;
-    font: 300 14px "Open Sans";
+    color: #5fc6d5;
+    /*font: 300 14px "Open Sans";*/
     line-height: 46px;
     white-space: nowrap;
     text-decoration: none;
@@ -398,8 +402,8 @@ a {
 /* Form text input */
  
 .form-wrapper input {
-    width: 530px;
-    height: 20px;
+    width: 528px;
+    height: 40px;
     padding: 10px 5px;
     float: left;    
     font: bold 15px "Open Sans";
@@ -556,7 +560,7 @@ input[type=checkbox]{display:none}
 
 #book-form {
     background-color:#F2F7F9;
-    width:465px;
+    width:495px;
     padding:20px;
     margin: 20px auto;
     border: 1px solid #8FB5C1;
