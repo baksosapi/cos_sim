@@ -15,7 +15,7 @@ $page_title = 'Tambah Koleksi Buku ...'
     <ul id="errors" class="">
         <li id="info">Terdapat kesalahan penambahan data:</li>
     </ul>
-    <p id="success">Data Type Buku berhasil ditambahkan!</p>
+    <p id="success" class="<?=(isset($this->id)) ? 'visible' : ''; ?>">Data Type Buku berhasil ditambahkan!</p>
     <form method="post" action="?url=books_type/add">
         <label for="type_name">Tipe Buku: <span class="required">*</span></label>
         <input type="text" id="type_name" name="type_name" value="" placeholder="Komputer" required="required" autofocus="autofocus" />

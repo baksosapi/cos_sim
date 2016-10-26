@@ -7,7 +7,7 @@
  */
 namespace Model;
 
-class Books_typeModel extends BaseModel
+class Stop_wordModel extends BaseModel
 {
 
     public function __construct()
@@ -18,10 +18,11 @@ class Books_typeModel extends BaseModel
     public function addNewStopWord($stopWord)
     {
         ksort($stopWord);
+
         $columns = implode(',', array_keys($stopWord));
         $values = ':'.implode(',:', array_keys($stopWord));
 
-        $st = $this->db->prepare("INSERT INTO books_type($columns) VALUES($values);");
+        $st = $this->db->prepare("INSERT INTO stop_word($columns) VALUES($values);");
 
         foreach ($stopWord as $k => $v) {
             $st->bindValue(":$k", $v);

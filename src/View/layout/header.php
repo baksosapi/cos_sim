@@ -34,9 +34,9 @@
         </div>
         <div class="ryjAXe-l4eHX_">
             <span class="menu-link"><a href="./">Home</a> </span>
-            <span class="menu-link"><a href="./?url=books/add">Book</a> </span>
-            <span class="menu-link"><a href="./?url=books_type/add">Type</a> </span>
-            <span class="menu-link"><a href="./?url=stop_word/add">Stop Word</a> </span>
+            <span class="menu-link"><a href="./?url=books/lists">Book</a> </span>
+            <span class="menu-link"><a href="./?url=books_type/lists">Type</a> </span>
+            <span class="menu-link"><a href="./?url=stop_word/lists">Stop Word</a> </span>
             <span class="menu-link"><a href="./?url=traine/add">Traine</a> </span>
             <span class="menu-link"><a href="./?url=exam/add">Uji</a> </span>
         </div>

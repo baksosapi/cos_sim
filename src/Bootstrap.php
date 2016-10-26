@@ -12,7 +12,7 @@ class Bootstrap
                 $url = explode('/', $_GET['url']);
 //                print_r($url);
                 $controller = '\\Controller\\'.ucfirst($url[0]);
-
+//print_r($controller);
                 (new $controller())->$url[1]();
 
             } else {

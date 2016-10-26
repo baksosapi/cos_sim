@@ -9,7 +9,7 @@ $page_title = 'Tambah Koleksi Buku ...'
 ?>
 
 <div id="book-form">
-    <table>
+    <table class="table">
         <tr>
             <th>Id Tipe</th>
             <th>Tipe Buku</th>
@@ -17,8 +17,8 @@ $page_title = 'Tambah Koleksi Buku ...'
         </tr>
         <?php foreach ($this->type_data as $type): ?>
             <tr>
-                <td><?= $type['code']?></td>
-                <td><?= $type['type_name']?></td>
+                <td><?= $type['id']?></td>
+                <td><?= $type['stop_word']?></td>
 <!--                <td>--><?//= $type['description']?><!--</td>-->
             </tr>
         <?php endforeach; ?>

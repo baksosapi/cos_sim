@@ -686,7 +686,7 @@ input[type=checkbox]{display:none}
     padding:25px 10px;
     margin:25px 0px;
     display:block;
-    width:437px;
+    /*width:437px;*/
     -webkit-border-radius:8px;
     -moz-border-radius:8px;
     border-radius:8px;

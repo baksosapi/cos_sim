@@ -15,10 +15,10 @@ $page_title = 'Tambah Koleksi Buku ...'
     <ul id="errors" class="">
         <li id="info">Terdapat kesalahan penambahan data:</li>
     </ul>
-    <p id="success">Data Stop Word berhasil ditambahkan!</p>
-    <form method="post" action="?url=books_type/add">
+    <p id="success" class="<?=(isset($this->id)) ? 'visible' : ''; ?>">Data Stop Word berhasil ditambahkan!</p>
+    <form method="post" action="?url=stop_word/add">
         <label for="type_name">Stop Word <span class="required">*</span></label>
-        <input type="text" id="type_name" name="type_name" value="" placeholder="Komputer" required="required" autofocus="autofocus" />
+        <input type="text" id="type_name" name="stop_word" value="" placeholder="Adalah" required="required" autofocus="autofocus" />
 
         <span id="loading"></span>
         <input type="submit" value="Tambahkan" id="submit-button" name="submit"/>

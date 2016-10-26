@@ -46,10 +46,9 @@ class Stop_word extends BaseController
 //            header("index.html");
             unset($_POST['submit']);
 
-
             $this->view->id = $this->model->addNewStopWord($_POST);
-        } else {
-            $this->view->render('stop_word/add');
         }
+        $this->view->render('stop_word/add');
+
     }
 }
