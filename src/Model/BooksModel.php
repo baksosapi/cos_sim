@@ -9,19 +9,11 @@ namespace Model;
 
 class BooksModel extends BaseModel
 {
-    //    protected $book_title;
-//    private $book_author;
-//    protected $book_subtitle;
-//    protected $book_publisher;
-//    protected $book_isbn;
-//    protected $book_year;
-//    protected $book_edition;
-//    protected $book_page;
-//    protected $book_blurb;
-
     public function __construct()
     {
         parent::__construct();
+
+        $this->tbl_books = 'bukubuku';
     }
 
     public function addNewBooks($book)
@@ -33,7 +25,7 @@ class BooksModel extends BaseModel
         $values = ':'.implode(', :', array_keys($book));
 //        print_r($values);
 
-        $st = $this->db->prepare("INSERT INTO bukubuku($columns) VALUES($values);");
+        $st = $this->db->prepare("INSERT INTO ".$this->tbl_books." ($columns) VALUES($values);");
 
 //        print_r($book['blurb']);
 
@@ -56,12 +48,12 @@ class BooksModel extends BaseModel
 
     public function getBooks()
     {
-        return $this->db->query('SELECT * FROM buku')->fetchAll(\PDO::FETCH_ASSOC);
+        return $this->db->query("SELECT * FROM ".$this->tbl_books)->fetchAll(\PDO::FETCH_ASSOC);
     }
 
     public function listBooks()
     {
-        $bukus =  $this->db->query('SELECT * FROM buku')->fetchAll(\PDO::FETCH_ASSOC);
+        $bukus =  $this->db->query("SELECT * FROM ".$this->tbl_books)->fetchAll(\PDO::FETCH_ASSOC);
 
         return $bukus;
     }

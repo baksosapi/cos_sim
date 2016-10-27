@@ -12,11 +12,12 @@ $page_title = 'Tambah Koleksi Buku ...'
 
     <div class="pull-right">
         <a href="#" class="btn btn-danger btn-lg ">
-            <span class="glyphicon glyphicon-remove "></span> Remove
+            <span class="glyphicon glyphicon-remove "></span> Empty
         </a>
         <a href="#" class="btn btn-info btn-lg">
             <span class="glyphicon glyphicon-plus-sign "></span> Add
         </a>
+        <hr>
     </div>
 
     <table class="table">
@@ -30,9 +31,10 @@ $page_title = 'Tambah Koleksi Buku ...'
             <tr>
                 <td><?= $books['kode_buku']?></td>
                 <td><?= $books['judul_buku']?></td>
-                <td><?= $books['keterangan']?></td>
+                <td class="text-justify col-lg-6"><?= $books['keterangan']?></td>
                 <td><img src="./img/books/<?= $books['img_buku']?>"></td>
-                <td><a href=""> Edit </a></td>
+                <td><span class="glyphicon glyphicon-edit "></span></td>
+                <td><span class="glyphicon glyphicon-trash "></span></td>
             </tr>
         <?php endforeach; ?>
     </table>
