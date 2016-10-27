@@ -9,6 +9,16 @@ $page_title = 'Tambah Koleksi Buku ...'
 ?>
 
 <div id="list-form">
+
+    <div class="pull-right">
+        <a href="#" class="btn btn-danger btn-lg ">
+            <span class="glyphicon glyphicon-remove "></span> Remove
+        </a>
+        <a href="#" class="btn btn-info btn-lg">
+            <span class="glyphicon glyphicon-plus-sign "></span> Add
+        </a>
+    </div>
+
     <table class="table">
         <tr>
             <th>Kode</th>
@@ -25,6 +35,5 @@ $page_title = 'Tambah Koleksi Buku ...'
                 <td><a href=""> Edit </a></td>
             </tr>
         <?php endforeach; ?>
-        <tr><td colspan="5"><a href="#add">Add</a> </td> </tr>
     </table>
 </div>

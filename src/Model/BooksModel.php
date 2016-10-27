@@ -33,7 +33,7 @@ class BooksModel extends BaseModel
         $values = ':'.implode(', :', array_keys($book));
 //        print_r($values);
 
-        $st = $this->db->prepare("INSERT INTO book($columns) VALUES($values);");
+        $st = $this->db->prepare("INSERT INTO bukubuku($columns) VALUES($values);");
 
 //        print_r($book['blurb']);
 
