@@ -18,6 +18,8 @@
     <!--<link href='//fonts.googleapis.com/css?family=Open+Sans:300&subset=cyrillic,latin' rel='stylesheet' type='text/css'>-->
     <link href='assets/css/font.css' rel='stylesheet' type='text/css'>
 
+<!--    <script src="assets/js/vendor/jquery-3.1.1.min.js"></script>-->
+
 
 </head>
 <body>

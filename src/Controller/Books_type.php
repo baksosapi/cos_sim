@@ -28,9 +28,9 @@ class Books_type extends BaseController
 
     public function lists()
     {
-        $type_data = $this->model->listBooksType();
+        $books = $this->model->listBooksType();
 
-        $this->view->type_data = $type_data;
+        $this->view->type_data = $books;
 
         $this->view->render('books_type/lists');
     }

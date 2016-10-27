@@ -27,6 +27,13 @@ class Books extends BaseController
         $this->view->render('books/get');
     }
 
+    public function lists()
+    {
+        $type_data = $this->model->listBooks();
+        $this->view->bukus =$type_data;
+        $this->view->render('books/lists');
+    }
+
     public function add()
     {
         if (isset($_POST['submit'])) {
