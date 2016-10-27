@@ -8,7 +8,7 @@
 $page_title = 'Tambah Koleksi Buku ...'
 ?>
 
-<div id="book-form">
+<div id="list-form">
     <table class="table">
         <tr>
             <th>Kode</th>
@@ -21,9 +21,10 @@ $page_title = 'Tambah Koleksi Buku ...'
                 <td><?= $books['kode_buku']?></td>
                 <td><?= $books['judul_buku']?></td>
                 <td><?= $books['keterangan']?></td>
-                <td><img src="<?= $books['img_buku']?>"></td>
-<!--                <td>--><?//= $type['description']?><!--</td>-->
+                <td><img src="./img/books/<?= $books['img_buku']?>"></td>
+                <td><a href=""> Edit </a></td>
             </tr>
         <?php endforeach; ?>
+        <tr><td colspan="5"><a href="#add">Add</a> </td> </tr>
     </table>
 </div>

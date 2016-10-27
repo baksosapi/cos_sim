@@ -8,7 +8,7 @@
 $page_title = 'Tambah Koleksi Buku ...'
 ?>
 
-<div id="book-form">
+<div id="list-form">
     <table>
         <tr>
             <th>Id Tipe</th>

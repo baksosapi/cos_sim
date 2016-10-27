@@ -558,6 +558,18 @@ input[type=checkbox]{display:none}
 }
 
 
+#list-form {
+    background-color:#F2F7F9;
+    width:80%;
+    padding:20px;
+    margin: 20px auto;
+    border: 1px solid #8FB5C1;
+    -moz-border-radius:15px;
+    -webkit-border-radius:15px;
+    border-radius:15px;
+    position:relative;
+}
+
 #book-form {
     background-color:#F2F7F9;
     width:495px;
